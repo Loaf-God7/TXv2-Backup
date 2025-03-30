@@ -1,0 +1,513 @@
+-------------------- Log Start | Fri Mar 28 00:26:50 2025 --------------------
+platform: Linux-4.9.191-armv7l-with-glibc2.28
+data_path: /home/gem/printer_data
+is_default_data_path: False
+config_file: /home/gem/printer_data/config/moonraker.conf
+startup_warnings: []
+verbose: False
+debug: False
+asyncio_debug: False
+is_backup_config: False
+is_python_package: False
+instance_uuid: 05c462f80d6f412785b0e1527692dcf9
+unix_socket_path: /home/gem/printer_data/comms/moonraker.sock
+software_version: v0.8.0-324-ga3e4dac-dirty
+git_branch: master
+git_remote: origin
+git_repo_url: https://github.com/Arksine/moonraker.git
+modified_files: ['moonraker/components/file_manager/file_manager.py']
+unofficial_components: []
+log_file: /home/gem/printer_data/logs/moonraker.log
+python_version: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+launch_args: /home/gem/moonraker-env/bin/python /home/gem/moonraker/moonraker/moonraker.py -d /home/gem/printer_data
+msgspec_enabled: False
+uvloop_enabled: False
+
+#################### Moonraker Configuration ####################
+
+[server]
+host = 0.0.0.0
+port = 7125
+klippy_uds_address = /home/gem/printer_data/comms/klippy.sock
+
+[authorization]
+trusted_clients = 
+	10.60.0.0/16
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+cors_domains = 
+	*.lan
+	*.local
+	*://localhost
+	*://localhost:*
+	*://my.mainsail.xyz
+	*://app.fluidd.xyz
+
+[machine]
+provider = none
+validate_service = False
+validate_config = False
+
+[file_manager]
+file_system_observer = none
+
+[octoprint_compat]
+
+[history]
+
+[timelapse]
+output_path = /home/gem/timelapse/
+frame_path = /tmp/timelapse/
+ffmpeg_binary_path = /usr/bin/ffmpeg
+
+#################################################################
+All Configuration Files:
+/home/gem/printer_data/config/moonraker.conf
+#################################################################
+
+Database Versions: pylmdb = 1.4.1, lmdb = (0, 9, 29)
+Unsafe Shutdown Count: 668
+
+System Info:
+
+***python***
+  version: (3, 7, 3, 'final', 0)
+  version_string: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+
+***cpu_info***
+  cpu_count: 1
+  bits: 32bit
+  processor: armv7l
+  cpu_desc: ARMv7 Processor rev 5 (v7l)
+  serial_number: 5c00108a2695c581d1a
+  hardware_desc: sun8iw21
+  model: 
+  total_memory: 503760
+  memory_units: kB
+
+***sd_info***
+  manufacturer_id: ec
+  manufacturer: Unknown
+  oem_id: 2900
+  product_name: AT2SA
+  product_revision: 4.1
+  serial_number: 2007e566
+  manufacturer_date: 10/2106
+  capacity: Unknown
+  total_bytes: 0
+
+***distribution***
+  name: Debian GNU/Linux 11 (bullseye)
+  id: debian
+  version: 11
+  version_parts: {'major': '11', 'minor': '', 'build_number': ''}
+  like: 
+  codename: bullseye
+  release_info: {}
+  kernel_version: 4.9.191
+
+***virtualization***
+  virt_type: none
+  virt_identifier: none
+
+***network***
+
+***canbus***
+
+***Allowed Services***
+  klipper_mcu
+  webcamd
+  MoonCord
+  KlipperScreen
+  moonraker-telegram-bot
+  moonraker-obico
+  timelapse
+  sonar
+  crowsnest
+  octoeverywhere
+  ratos-configurator
+Module libcamera unavailble, import failed
+Klipper Version: bfb71bc-dirty
+2025-03-28 00:26:50,948 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.120.50
+2025-03-28 00:29:20,365 [websockets.py:on_close()] - Websocket Closed: ID: 2785604624 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 5.03
+2025-03-28 00:29:21,327 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.120.50
+2025-03-28 00:29:21,447 [application.py:log_request()] - 101 GET /websocket?token=V7PAO6YOVTKINFJZMHHXBXVOCHG34IP3 (192.168.120.50) [_TRUSTED_USER_] 5.62ms
+2025-03-28 00:29:21,449 [websockets.py:open()] - Websocket Opened: ID: 2785025584, Proxied: False, User Agent: BBL-Slicer/v01.09.05.51 (light) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.52, Host Name: 192.168.120.53
+2025-03-28 00:29:21,463 [websockets.py:_handle_identify()] - Websocket 2785025584 Client Identified - Name: fluidd, Version: 1.30.3-7ec46260, Type: web
+2025-03-28 00:29:21,466 [file_manager.py:get_file_list()] - Updating File List <config>...
+2025-03-28 00:29:25,164 [websockets.py:on_close()] - Websocket Closed: ID: 2785025584 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 3.72
+2025-03-28 00:29:26,122 [application.py:log_request()] - 101 GET /websocket?token=F5YGLIT4BI4MF2B5MZJCVIWFXTYD2QVB (192.168.120.50) [_TRUSTED_USER_] 13.16ms
+2025-03-28 00:29:26,124 [websockets.py:open()] - Websocket Opened: ID: 2785471152, Proxied: False, User Agent: BBL-Slicer/v01.09.05.51 (light) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.52, Host Name: 192.168.120.53
+2025-03-28 00:29:26,159 [websockets.py:_handle_identify()] - Websocket 2785471152 Client Identified - Name: fluidd, Version: 1.30.3-7ec46260, Type: web
+2025-03-28 00:29:26,177 [file_manager.py:get_file_list()] - Updating File List <config>...
+2025-03-28 00:29:43,856 [websockets.py:on_close()] - Websocket Closed: ID: 2785471152 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 7.72
+2025-03-28 00:29:44,254 [application.py:log_request()] - 101 GET /websocket?token=QAFIGQQINEVV6OMQXZR7YI56LYDGDSTH (192.168.120.50) [_TRUSTED_USER_] 7.28ms
+2025-03-28 00:29:44,255 [websockets.py:open()] - Websocket Opened: ID: 2785604368, Proxied: False, User Agent: BBL-Slicer/v01.09.05.51 (light) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.52, Host Name: 192.168.120.53
+2025-03-28 00:29:44,265 [websockets.py:_handle_identify()] - Websocket 2785604368 Client Identified - Name: fluidd, Version: 1.30.3-7ec46260, Type: web
+2025-03-28 00:29:44,268 [file_manager.py:get_file_list()] - Updating File List <config>...
+2025-03-28 01:31:01,486 [websockets.py:on_close()] - Websocket Closed: ID: 2785604368 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 7.22
+2025-03-28 01:31:01,741 [application.py:log_request()] - 101 GET /websocket?token=ZKOWXDHGB7FBRFPVU46QDLQN4MZEQSRO (192.168.120.50) [_TRUSTED_USER_] 5.41ms
+2025-03-28 01:31:01,743 [websockets.py:open()] - Websocket Opened: ID: 2784950512, Proxied: False, User Agent: BBL-Slicer/v01.09.05.51 (light) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.52, Host Name: 192.168.120.53
+2025-03-28 01:31:01,751 [websockets.py:_handle_identify()] - Websocket 2784950512 Client Identified - Name: fluidd, Version: 1.30.3-7ec46260, Type: web
+2025-03-28 01:31:01,755 [file_manager.py:get_file_list()] - Updating File List <config>...
+2025-03-28 01:32:16,925 [application.py:prepare()] - Upload Request Received from 192.168.120.50
+Content-Type: multipart/form-data; boundary=------------------------68877e11bdbdf579
+2025-03-28 01:32:17,079 [application.py:post()] - Processing Uploaded File: wedge_magnet_test_PETG_7m9s.gcode
+2025-03-28 01:32:17,940 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2025-03-28 01:32:18,235 [shell_command.py:_check_proc_success()] - Command (/home/gem/moonraker-env/bin/python /home/gem/moonraker/moonraker/components/file_manager/metadata.py -p /home/gem/printer_data/gcodes -f "wedge_magnet_test_PETG_7m9s.gcode") successfully finished
+2025-03-28 01:32:18,309 [application.py:log_request()] - 201 POST /api/files/local (192.168.120.50) [_API_KEY_USER_] 1386.14ms
+2025-03-28 01:32:18,433 [job_state.py:_status_update()] - Job Started: wedge_magnet_test_PETG_7m9s.gcode
+2025-03-28 01:34:22,691 [websockets.py:on_close()] - Websocket Closed: ID: 2784950512 Close Code: None, Close Reason: None, Pong Time Elapsed: 0.94
+2025-03-28 02:11:13,580 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.120.39
+2025-03-28 02:11:13,817 [application.py:log_request()] - 101 GET /websocket?token=7VXBYZYWVMDPPH47QZQLIRAIKX64OECQ (192.168.120.39) [_TRUSTED_USER_] 6.03ms
+2025-03-28 02:11:13,818 [websockets.py:open()] - Websocket Opened: ID: 2785471728, Proxied: True, User Agent: Mozilla/5.0 (Android 15; Mobile; rv:136.0) Gecko/136.0 Firefox/136.0, Host Name: 192.168.120.53
+2025-03-28 02:11:13,837 [websockets.py:_handle_identify()] - Websocket 2785471728 Client Identified - Name: fluidd, Version: 1.30.3-7ec46260, Type: web
+2025-03-28 02:11:13,840 [file_manager.py:get_file_list()] - Updating File List <config>...
+2025-03-28 02:11:45,152 [websockets.py:on_close()] - Websocket Closed: ID: 2785471728 Close Code: None, Close Reason: None, Pong Time Elapsed: 0.09
+2025-03-28 02:12:27,706 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2025-03-28 02:13:27,520 [application.py:log_request()] - 101 GET /websocket?token=EPQTJ5A2HZPSDWQBJIYBBFVKGGUIOTYC (192.168.120.39) [_TRUSTED_USER_] 6.17ms
+2025-03-28 02:13:27,522 [websockets.py:open()] - Websocket Opened: ID: 2785558576, Proxied: True, User Agent: Mozilla/5.0 (Android 15; Mobile; rv:136.0) Gecko/136.0 Firefox/136.0, Host Name: 192.168.120.53
+2025-03-28 02:13:27,536 [websockets.py:_handle_identify()] - Websocket 2785558576 Client Identified - Name: fluidd, Version: 1.30.3-7ec46260, Type: web
+2025-03-28 02:13:27,540 [file_manager.py:get_file_list()] - Updating File List <config>...
+2025-03-28 02:13:49,119 [websockets.py:on_close()] - Websocket Closed: ID: 2785558576 Close Code: None, Close Reason: None, Pong Time Elapsed: 1.58
+2025-03-28 02:31:15,311 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+2025-03-28 02:32:15,321 [klippy_connection.py:wait()] - Request 'gcode/script' pending: 60.00 seconds
+2025-03-28 02:36:50,992 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.120.50
+2025-03-28 02:38:21,473 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.120.50
+2025-03-28 02:38:21,581 [application.py:log_request()] - 101 GET /websocket?token=NYO5BMEYK5CV57UXPQ5CMSDJSHCMSJC3 (192.168.120.50) [_TRUSTED_USER_] 5.39ms
+2025-03-28 02:38:21,582 [websockets.py:open()] - Websocket Opened: ID: 2784886960, Proxied: False, User Agent: BBL-Slicer/v01.09.05.51 (light) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.52, Host Name: 192.168.120.53
+2025-03-28 02:38:21,600 [websockets.py:_handle_identify()] - Websocket 2784886960 Client Identified - Name: fluidd, Version: 1.30.3-7ec46260, Type: web
+2025-03-28 02:38:21,603 [file_manager.py:get_file_list()] - Updating File List <config>...
+2025-03-28 02:41:30,643 [application.py:prepare()] - Upload Request Received from 192.168.120.50
+Content-Type: multipart/form-data; boundary=------------------------e69dcb367733cecf
+2025-03-28 02:41:32,069 [application.py:post()] - Processing Uploaded File: Miata_headlight_cap_TPU_18m32s.gcode
+2025-03-28 02:41:32,783 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2025-03-28 02:41:33,193 [shell_command.py:_check_proc_success()] - Command (/home/gem/moonraker-env/bin/python /home/gem/moonraker/moonraker/components/file_manager/metadata.py -p /home/gem/printer_data/gcodes -f "Miata_headlight_cap_TPU_18m32s.gcode") successfully finished
+2025-03-28 02:41:34,139 [application.py:log_request()] - 201 POST /api/files/local (192.168.120.50) [_API_KEY_USER_] 3498.20ms
+2025-03-28 02:41:34,398 [job_state.py:_status_update()] - Job Started: Miata_headlight_cap_TPU_18m32s.gcode
+2025-03-28 02:42:19,559 [klippy_connection.py:_process_status_update()] - Klippy has shutdown
+2025-03-28 02:42:19,595 [proc_stats.py:_handle_shutdown()] - 
+Moonraker System Usage Statistics:
+System Time: 1743129710.288317, Usage: 4.09%, Memory: 25692 kB
+System Time: 1743129711.290460, Usage: 3.94%, Memory: 25692 kB
+System Time: 1743129712.291749, Usage: 4.07%, Memory: 25692 kB
+System Time: 1743129713.289795, Usage: 5.97%, Memory: 25692 kB
+System Time: 1743129714.295681, Usage: 3.63%, Memory: 25692 kB
+System Time: 1743129715.292933, Usage: 3.7%, Memory: 25692 kB
+System Time: 1743129716.292198, Usage: 3.6%, Memory: 25692 kB
+System Time: 1743129717.293403, Usage: 3.71%, Memory: 25692 kB
+System Time: 1743129718.294508, Usage: 3.57%, Memory: 25692 kB
+System Time: 1743129719.295629, Usage: 3.62%, Memory: 25692 kB
+System Time: 1743129720.296427, Usage: 3.94%, Memory: 25692 kB
+System Time: 1743129721.297712, Usage: 3.57%, Memory: 25692 kB
+System Time: 1743129722.298799, Usage: 3.93%, Memory: 25692 kB
+System Time: 1743129723.301431, Usage: 5.16%, Memory: 25692 kB
+System Time: 1743129724.303092, Usage: 3.51%, Memory: 25692 kB
+System Time: 1743129725.309888, Usage: 3.64%, Memory: 25692 kB
+System Time: 1743129726.309269, Usage: 3.54%, Memory: 25692 kB
+System Time: 1743129727.309455, Usage: 3.62%, Memory: 25692 kB
+System Time: 1743129728.316604, Usage: 3.88%, Memory: 25692 kB
+System Time: 1743129729.316039, Usage: 4.27%, Memory: 25692 kB
+System Time: 1743129730.317673, Usage: 4.08%, Memory: 25692 kB
+System Time: 1743129731.318137, Usage: 4.44%, Memory: 25692 kB
+System Time: 1743129732.320124, Usage: 4.44%, Memory: 25692 kB
+System Time: 1743129733.322468, Usage: 6.07%, Memory: 25692 kB
+System Time: 1743129734.323236, Usage: 3.61%, Memory: 25692 kB
+System Time: 1743129735.324360, Usage: 5.26%, Memory: 25692 kB
+System Time: 1743129736.325422, Usage: 4.13%, Memory: 25692 kB
+System Time: 1743129737.327884, Usage: 4.11%, Memory: 25692 kB
+System Time: 1743129738.331539, Usage: 4.05%, Memory: 25692 kB
+System Time: 1743129739.332585, Usage: 4.04%, Memory: 25692 kB
+CPU Temperature: 36.12
+2025-03-28 02:42:19,734 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.print.cancel, Code: 400, Message: Shutdown due to webhooks request
+Once the underlying issue is corrected, use the
+"FIRMWARE_RESTART" command to reset the firmware, reload the
+config, and restart the host software.
+Printer is shutdown
+
+2025-03-28 02:42:22,583 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2025-03-28 02:42:22,638 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: printer.info, Code: 503, Message: Klippy Host not connected
+2025-03-28 02:42:24,103 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-03-28 02:42:29,915 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2025-03-28 02:42:29,927 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2025-03-28 02:42:30,160 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-03-28 02:42:30,459 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-03-28 02:42:30,548 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.connection.identify, Code: -32602, Message: Failed to decode JWT: not enough values to unpack (expected 2, got 1)
+2025-03-28 02:42:30,953 [data_store.py:_init_sensors()] - Configuring available sensors: ['temperature_sensor MCU', 'temperature_sensor HOST', 'heater_bed', 'extruder']
+2025-03-28 02:43:12,740 [application.py:prepare()] - Upload Request Received from 192.168.120.50
+Content-Type: multipart/form-data; boundary=------------------------bea2e996eb62f71a
+2025-03-28 02:43:13,492 [application.py:post()] - Processing Uploaded File: miata_cap_TPU_18m32s.gcode
+2025-03-28 02:43:14,353 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2025-03-28 02:43:14,744 [shell_command.py:_check_proc_success()] - Command (/home/gem/moonraker-env/bin/python /home/gem/moonraker/moonraker/components/file_manager/metadata.py -p /home/gem/printer_data/gcodes -f "miata_cap_TPU_18m32s.gcode") successfully finished
+2025-03-28 02:43:15,301 [job_state.py:_status_update()] - Job Started: miata_cap_TPU_18m32s.gcode
+2025-03-28 02:43:15,702 [application.py:log_request()] - 201 POST /api/files/local (192.168.120.50) [_API_KEY_USER_] 2967.55ms
+2025-03-28 03:11:49,487 [application.py:log_request()] - 101 GET /websocket?token=YWWSAWZSMSTT7JTJHSKJN2EJ6AV6QTTU (192.168.120.39) [_TRUSTED_USER_] 5.98ms
+2025-03-28 03:11:49,489 [websockets.py:open()] - Websocket Opened: ID: 2785577872, Proxied: True, User Agent: Mozilla/5.0 (Android 15; Mobile; rv:136.0) Gecko/136.0 Firefox/136.0, Host Name: 192.168.120.53
+2025-03-28 03:11:49,501 [websockets.py:_handle_identify()] - Websocket 2785577872 Client Identified - Name: fluidd, Version: 1.30.3-7ec46260, Type: web
+2025-03-28 03:11:49,504 [file_manager.py:get_file_list()] - Updating File List <config>...
+2025-03-28 03:12:05,920 [websockets.py:on_close()] - Websocket Closed: ID: 2785577872 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 16.44
+2025-03-28 03:12:16,272 [application.py:log_request()] - 101 GET /websocket?token=OEYHCA2IVC3IRJNY7OEIVSTD3JWDMAHF (192.168.120.39) [_TRUSTED_USER_] 5.80ms
+2025-03-28 03:12:16,273 [websockets.py:open()] - Websocket Opened: ID: 2785356784, Proxied: True, User Agent: Mozilla/5.0 (Android 15; Mobile; rv:136.0) Gecko/136.0 Firefox/136.0, Host Name: 192.168.120.53
+2025-03-28 03:12:17,129 [websockets.py:_handle_identify()] - Websocket 2785356784 Client Identified - Name: fluidd, Version: 1.30.3-7ec46260, Type: web
+2025-03-28 03:12:17,161 [file_manager.py:get_file_list()] - Updating File List <config>...
+2025-03-28 03:12:37,011 [websockets.py:on_close()] - Websocket Closed: ID: 2785356784 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 20.74
+2025-03-28 03:22:16,587 [websockets.py:on_close()] - Websocket Closed: ID: 2784886960 Close Code: None, Close Reason: None, Pong Time Elapsed: 37.45
+2025-03-28 03:22:16,590 [websockets.py:write_to_socket()] - Websocket closed while writing: 2784886960
+2025-03-28 03:22:29,363 [application.py:log_request()] - 101 GET /websocket?token=RGNXB26IGSMMSVWSNPJTTHM2O4KL5DNU (192.168.120.50) [_TRUSTED_USER_] 5.43ms
+2025-03-28 03:22:29,364 [websockets.py:open()] - Websocket Opened: ID: 2785023952, Proxied: False, User Agent: BBL-Slicer/v01.09.05.51 (light) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.52, Host Name: 192.168.120.53
+2025-03-28 03:22:29,969 [websockets.py:_handle_identify()] - Websocket 2785023952 Client Identified - Name: fluidd, Version: 1.30.3-7ec46260, Type: web
+2025-03-28 03:22:30,082 [file_manager.py:get_file_list()] - Updating File List <config>...
+2025-03-28 03:23:12,131 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.120.53
+2025-03-28 03:23:34,369 [websockets.py:on_close()] - Websocket Closed: ID: 2785023952 Close Code: None, Close Reason: None, Pong Time Elapsed: 37.14
+2025-03-28 03:23:34,372 [websockets.py:write_to_socket()] - Websocket closed while writing: 2785023952
+2025-03-28 03:26:42,771 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2025-03-28 03:26:42,774 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://127.0.0.1
+2025-03-28 03:26:53,051 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [Errno -3] Temporary failure in name resolution
+2025-03-28 03:26:55,086 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [Errno -3] Temporary failure in name resolution
+2025-03-28 03:27:12,859 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.120.53
+2025-03-28 03:27:12,863 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.120.53
+2025-03-28 03:27:36,650 [application.py:log_request()] - 101 GET /websocket?token=NCNAROXQPVPVKASCAS2DTNC3GQ37PUAO (192.168.120.50) [_TRUSTED_USER_] 10.09ms
+2025-03-28 03:27:36,651 [websockets.py:open()] - Websocket Opened: ID: 2784949584, Proxied: False, User Agent: BBL-Slicer/v01.09.05.51 (light) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.52, Host Name: 192.168.120.53
+2025-03-28 03:27:36,674 [websockets.py:_handle_identify()] - Websocket 2784949584 Client Identified - Name: fluidd, Version: 1.30.3-7ec46260, Type: web
+2025-03-28 03:27:36,678 [file_manager.py:get_file_list()] - Updating File List <config>...
+2025-03-28 03:44:05,624 [websockets.py:on_close()] - Websocket Closed: ID: 2784949584 Close Code: None, Close Reason: None, Pong Time Elapsed: 8.97
+2025-03-28 03:46:51,013 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2025-03-28 03:51:37,752 [application.py:log_request()] - 101 GET /websocket?token=VNCA6MOGB5XOBOWAU6JVEXYD7KSNS4LU (192.168.120.50) [_TRUSTED_USER_] 6.09ms
+2025-03-28 03:51:37,756 [websockets.py:open()] - Websocket Opened: ID: 2785472176, Proxied: False, User Agent: BBL-Slicer/v01.09.05.51 (light) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.52, Host Name: 192.168.120.53
+2025-03-28 03:51:37,767 [websockets.py:_handle_identify()] - Websocket 2785472176 Client Identified - Name: fluidd, Version: 1.30.3-7ec46260, Type: web
+2025-03-28 03:51:37,770 [file_manager.py:get_file_list()] - Updating File List <config>...
+2025-03-28 03:52:29,480 [application.py:prepare()] - Upload Request Received from 192.168.120.50
+Content-Type: multipart/form-data; boundary=------------------------c06b0b258250b43e
+2025-03-28 03:52:30,729 [application.py:post()] - Processing Uploaded File: Miata_rod_caps_v22_TPU_18m47s.gcode
+2025-03-28 03:52:31,674 [shell_command.py:pipe_data_received()] - INFO:metadata:Object Processing is disabled
+
+2025-03-28 03:52:32,078 [shell_command.py:_check_proc_success()] - Command (/home/gem/moonraker-env/bin/python /home/gem/moonraker/moonraker/components/file_manager/metadata.py -p /home/gem/printer_data/gcodes -f "Miata_rod_caps_v22_TPU_18m47s.gcode") successfully finished
+2025-03-28 03:52:32,581 [job_state.py:_status_update()] - Job Started: Miata_rod_caps_v22_TPU_18m47s.gcode
+2025-03-28 03:52:32,625 [application.py:log_request()] - 201 POST /api/files/local (192.168.120.50) [_API_KEY_USER_] 3149.21ms
+2025-03-28 03:57:35,747 [websockets.py:on_close()] - Websocket Closed: ID: 2785472176 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 7.98
+2025-03-28 04:16:51,021 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.120.39
+-------------------- Log Start | Thu Jan  1 00:00:14 1970 --------------------
+platform: Linux-4.9.191-armv7l-with-glibc2.28
+data_path: /home/gem/printer_data
+is_default_data_path: False
+config_file: /home/gem/printer_data/config/moonraker.conf
+startup_warnings: []
+verbose: False
+debug: False
+asyncio_debug: False
+is_backup_config: False
+is_python_package: False
+instance_uuid: 05c462f80d6f412785b0e1527692dcf9
+unix_socket_path: /home/gem/printer_data/comms/moonraker.sock
+software_version: v0.8.0-324-ga3e4dac-dirty
+git_branch: master
+git_remote: origin
+git_repo_url: https://github.com/Arksine/moonraker.git
+modified_files: ['moonraker/components/file_manager/file_manager.py']
+unofficial_components: []
+log_file: /home/gem/printer_data/logs/moonraker.log
+python_version: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+launch_args: /home/gem/moonraker-env/bin/python /home/gem/moonraker/moonraker/moonraker.py -d /home/gem/printer_data
+msgspec_enabled: False
+uvloop_enabled: False
+1970-01-01 00:00:14,216 [confighelper.py:read_file()] - Configuration File '/home/gem/printer_data/config/moonraker.conf' parsed, total size: 2348 B
+1970-01-01 00:00:14,223 [server.py:add_log_rollover_item()] - 
+#################### Moonraker Configuration ####################
+
+[server]
+host = 0.0.0.0
+port = 7125
+klippy_uds_address = /home/gem/printer_data/comms/klippy.sock
+
+[authorization]
+trusted_clients = 
+	10.60.0.0/16
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+cors_domains = 
+	*.lan
+	*.local
+	*://localhost
+	*://localhost:*
+	*://my.mainsail.xyz
+	*://app.fluidd.xyz
+
+[machine]
+provider = none
+validate_service = False
+validate_config = False
+
+[file_manager]
+file_system_observer = none
+
+[octoprint_compat]
+
+[history]
+
+[timelapse]
+output_path = /home/gem/timelapse/
+frame_path = /tmp/timelapse/
+ffmpeg_binary_path = /usr/bin/ffmpeg
+
+#################################################################
+All Configuration Files:
+/home/gem/printer_data/config/moonraker.conf
+#################################################################
+1970-01-01 00:00:14,956 [server.py:load_component()] - Component (secrets) loaded
+1970-01-01 00:00:15,021 [server.py:load_component()] - Component (template) loaded
+1970-01-01 00:00:15,126 [server.py:load_component()] - Component (klippy_connection) loaded
+1970-01-01 00:00:17,284 [server.py:load_component()] - Component (application) loaded
+1970-01-01 00:00:17,544 [server.py:load_component()] - Component (websockets) loaded
+1970-01-01 00:00:18,034 [server.py:load_component()] - Component (dbus_manager) loaded
+1970-01-01 00:00:18,137 [server.py:add_log_rollover_item()] - 
+Database Versions: pylmdb = 1.4.1, lmdb = (0, 9, 29)
+Unsafe Shutdown Count: 669
+1970-01-01 00:00:18,157 [server.py:load_component()] - Component (database) loaded
+1970-01-01 00:00:18,397 [file_manager.py:__init__()] - File System Observation is disabled
+1970-01-01 00:00:18,535 [server.py:load_component()] - Component (file_manager) loaded
+1970-01-01 00:00:18,743 [authorization.py:__init__()] - Authorization Configuration Loaded
+Trusted Clients:
+10.60.0.0/16
+10.0.0.0/8
+127.0.0.0/8
+169.254.0.0/16
+172.16.0.0/12
+192.168.0.0/16
+fe80::/10
+::1/128
+CORS Domains:
+.*\.lan
+.*\.local
+.*://localhost
+.*://localhost:.*
+.*://my\.mainsail\.xyz
+.*://app\.fluidd\.xyz
+1970-01-01 00:00:18,796 [server.py:load_component()] - Component (authorization) loaded
+1970-01-01 00:00:18,870 [server.py:load_component()] - Component (klippy_apis) loaded
+1970-01-01 00:00:19,372 [server.py:add_log_rollover_item()] - 
+System Info:
+
+***python***
+  version: (3, 7, 3, 'final', 0)
+  version_string: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+
+***cpu_info***
+  cpu_count: 1
+  bits: 32bit
+  processor: armv7l
+  cpu_desc: ARMv7 Processor rev 5 (v7l)
+  serial_number: 5c00108a2695c581d1a
+  hardware_desc: sun8iw21
+  model: 
+  total_memory: 503760
+  memory_units: kB
+
+***sd_info***
+  manufacturer_id: ec
+  manufacturer: Unknown
+  oem_id: 2900
+  product_name: AT2SA
+  product_revision: 4.1
+  serial_number: 2007e566
+  manufacturer_date: 10/2106
+  capacity: Unknown
+  total_bytes: 0
+
+***distribution***
+  name: Debian GNU/Linux 11 (bullseye)
+  id: debian
+  version: 11
+  version_parts: {'major': '11', 'minor': '', 'build_number': ''}
+  like: 
+  codename: bullseye
+  release_info: {}
+  kernel_version: 4.9.191
+
+***virtualization***
+  virt_type: none
+  virt_identifier: none
+
+***network***
+
+***canbus***
+
+***Allowed Services***
+  klipper_mcu
+  webcamd
+  MoonCord
+  KlipperScreen
+  moonraker-telegram-bot
+  moonraker-obico
+  timelapse
+  sonar
+  crowsnest
+  octoeverywhere
+  ratos-configurator
+1970-01-01 00:00:19,386 [server.py:load_component()] - Component (shell_command) loaded
+1970-01-01 00:00:19,392 [machine.py:__init__()] - Using System Provider: none
+1970-01-01 00:00:19,523 [server.py:add_log_rollover_item()] - Module libcamera unavailble, import failed
+1970-01-01 00:00:19,530 [server.py:load_component()] - Component (machine) loaded
+1970-01-01 00:00:19,539 [server.py:load_component()] - Component (data_store) loaded
+1970-01-01 00:00:19,565 [proc_stats.py:__init__()] - Unable to find 'vcgencmd', throttle checking disabled
+1970-01-01 00:00:19,574 [server.py:load_component()] - Component (proc_stats) loaded
+1970-01-01 00:00:19,589 [server.py:load_component()] - Component (job_state) loaded
+1970-01-01 00:00:19,638 [server.py:load_component()] - Component (job_queue) loaded
+1970-01-01 00:00:19,723 [server.py:load_component()] - Component (http_client) loaded
+1970-01-01 00:00:19,809 [server.py:load_component()] - Component (announcements) loaded
+1970-01-01 00:00:19,864 [server.py:load_component()] - Component (webcam) loaded
+1970-01-01 00:00:19,937 [server.py:load_component()] - Component (extensions) loaded
+1970-01-01 00:00:20,045 [server.py:load_component()] - Component (octoprint_compat) loaded
+1970-01-01 00:00:20,124 [server.py:load_component()] - Component (history) loaded
+1970-01-01 00:00:20,233 [server.py:load_component()] - Component (timelapse) loaded
+1970-01-01 00:00:20,254 [server.py:_initialize_component()] - Performing Component Post Init: [dbus_manager]
+1970-01-01 00:00:20,264 [dbus_manager.py:component_init()] - Unable to Connect to D-Bus
+1970-01-01 00:00:20,276 [server.py:_initialize_component()] - Performing Component Post Init: [file_manager]
+1970-01-01 00:00:20,277 [server.py:_initialize_component()] - Performing Component Post Init: [authorization]
+1970-01-01 00:00:20,277 [server.py:_initialize_component()] - Performing Component Post Init: [machine]
+1970-01-01 00:00:20,284 [machine.py:validation_init()] - Installation version in database up to date
+1970-01-01 00:00:20,374 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.120.53
+1970-01-01 00:00:20,393 [server.py:_initialize_component()] - Performing Component Post Init: [proc_stats]
+1970-01-01 00:00:20,395 [server.py:_initialize_component()] - Performing Component Post Init: [announcements]
+1970-01-01 00:00:20,405 [server.py:_initialize_component()] - Performing Component Post Init: [webcam]
+1970-01-01 00:00:20,410 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.120.53
+1970-01-01 00:00:20,419 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.120.53
+1970-01-01 00:00:20,428 [server.py:_initialize_component()] - Performing Component Post Init: [klippy_connection]
+1970-01-01 00:00:20,440 [server.py:_initialize_component()] - Performing Component Post Init: [history]
+1970-01-01 00:00:20,449 [server.py:_initialize_component()] - Performing Component Post Init: [timelapse]
+1970-01-01 00:00:20,461 [timelapse.py:parseWebcamConfig()] - snapshoturl: http://localhost/timelapse/timelapse.jpg, Flip V/H: False/False, rotation: 0
+1970-01-01 00:00:20,534 [confighelper.py:create_backup()] - Backing up last working configuration to '/home/gem/printer_data/config/.moonraker.conf.bkp'
+1970-01-01 00:00:20,596 [extensions.py:start_unix_server()] - Creating Unix Domain Socket at '/home/gem/printer_data/comms/moonraker.sock'
+1970-01-01 00:00:20,609 [server.py:start_server()] - Starting Moonraker on (0.0.0.0, 7125), Hostname: Octopus
+1970-01-01 00:00:20,613 [application.py:listen()] - SSL Certificate/Key not configured, aborting HTTPS Server startup
+1970-01-01 00:00:20,733 [iostream.py:_do_ssl_handshake()] - SSL Error on 13 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:20,887 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+1970-01-01 00:00:21,347 [iostream.py:_do_ssl_handshake()] - SSL Error on 13 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:21,587 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+1970-01-01 00:00:21,635 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 75.92ms
+1970-01-01 00:00:21,950 [iostream.py:_do_ssl_handshake()] - SSL Error on 13 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:22,554 [iostream.py:_do_ssl_handshake()] - SSL Error on 13 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:22,714 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 27.21ms
+1970-01-01 00:00:23,247 [iostream.py:_do_ssl_handshake()] - SSL Error on 13 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:23,275 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:23,397 [iostream.py:_do_ssl_handshake()] - SSL Error on 13 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:23,789 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 32.24ms
+1970-01-01 00:00:24,045 [iostream.py:_do_ssl_handshake()] - SSL Error on 13 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:24,670 [iostream.py:_do_ssl_handshake()] - SSL Error on 13 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:24,845 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 17.50ms
+1970-01-01 00:00:25,300 [iostream.py:_do_ssl_handshake()] - SSL Error on 13 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:25,925 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 18.33ms
+1970-01-01 00:00:25,951 [iostream.py:_do_ssl_handshake()] - SSL Error on 13 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:26,002 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)

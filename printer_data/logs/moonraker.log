@@ -1,0 +1,1819 @@
+-------------------- Log Start | Sun Mar 30 00:00:01 2025 --------------------
+platform: Linux-4.9.191-armv7l-with-glibc2.28
+data_path: /home/gem/printer_data
+is_default_data_path: False
+config_file: /home/gem/printer_data/config/moonraker.conf
+startup_warnings: []
+verbose: False
+debug: False
+asyncio_debug: False
+is_backup_config: False
+is_python_package: False
+instance_uuid: 05c462f80d6f412785b0e1527692dcf9
+unix_socket_path: /home/gem/printer_data/comms/moonraker.sock
+software_version: v0.8.0-324-ga3e4dac-dirty
+git_branch: master
+git_remote: origin
+git_repo_url: https://github.com/Arksine/moonraker.git
+modified_files: ['moonraker/components/file_manager/file_manager.py']
+unofficial_components: []
+log_file: /home/gem/printer_data/logs/moonraker.log
+python_version: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+launch_args: /home/gem/moonraker-env/bin/python /home/gem/moonraker/moonraker/moonraker.py -d /home/gem/printer_data
+msgspec_enabled: False
+uvloop_enabled: False
+
+#################### Moonraker Configuration ####################
+
+[server]
+host = 0.0.0.0
+port = 7125
+klippy_uds_address = /home/gem/printer_data/comms/klippy.sock
+
+[authorization]
+trusted_clients = 
+	10.60.0.0/16
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+cors_domains = 
+	*.lan
+	*.local
+	*://localhost
+	*://localhost:*
+	*://my.mainsail.xyz
+	*://app.fluidd.xyz
+
+[machine]
+provider = none
+validate_service = False
+validate_config = False
+
+[file_manager]
+file_system_observer = none
+
+[octoprint_compat]
+
+[history]
+
+[timelapse]
+output_path = /home/gem/timelapse/
+frame_path = /tmp/timelapse/
+ffmpeg_binary_path = /usr/bin/ffmpeg
+
+#################################################################
+All Configuration Files:
+/home/gem/printer_data/config/moonraker.conf
+#################################################################
+
+Database Versions: pylmdb = 1.4.1, lmdb = (0, 9, 29)
+Unsafe Shutdown Count: 670
+
+System Info:
+
+***python***
+  version: (3, 7, 3, 'final', 0)
+  version_string: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+
+***cpu_info***
+  cpu_count: 1
+  bits: 32bit
+  processor: armv7l
+  cpu_desc: ARMv7 Processor rev 5 (v7l)
+  serial_number: 5c00108a2695c581d1a
+  hardware_desc: sun8iw21
+  model: 
+  total_memory: 503760
+  memory_units: kB
+
+***sd_info***
+  manufacturer_id: ec
+  manufacturer: Unknown
+  oem_id: 2900
+  product_name: AT2SA
+  product_revision: 4.1
+  serial_number: 2007e566
+  manufacturer_date: 10/2106
+  capacity: Unknown
+  total_bytes: 0
+
+***distribution***
+  name: Debian GNU/Linux 11 (bullseye)
+  id: debian
+  version: 11
+  version_parts: {'major': '11', 'minor': '', 'build_number': ''}
+  like: 
+  codename: bullseye
+  release_info: {}
+  kernel_version: 4.9.191
+
+***virtualization***
+  virt_type: none
+  virt_identifier: none
+
+***network***
+
+***canbus***
+
+***Allowed Services***
+  klipper_mcu
+  webcamd
+  MoonCord
+  KlipperScreen
+  moonraker-telegram-bot
+  moonraker-obico
+  timelapse
+  sonar
+  crowsnest
+  octoeverywhere
+  ratos-configurator
+Module libcamera unavailble, import failed
+Klipper Version: bfb71bc-dirty
+2025-03-30 00:00:01,389 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.120.50
+2025-03-30 02:18:34,495 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.120.50
+2025-03-30 02:18:34,530 [application.py:log_request()] - 101 GET /websocket?token=5D5NGU5ENVIDEAIHSMZFMAVCQLVW257J (192.168.120.50) [_TRUSTED_USER_] 5.62ms
+2025-03-30 02:18:34,531 [websockets.py:open()] - Websocket Opened: ID: 2783781392, Proxied: False, User Agent: BBL-Slicer/v01.09.05.51 (light) Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.52, Host Name: 192.168.120.53
+2025-03-30 02:18:34,563 [websockets.py:_handle_identify()] - Websocket 2783781392 Client Identified - Name: fluidd, Version: 1.30.3-7ec46260, Type: web
+2025-03-30 02:18:34,566 [file_manager.py:get_file_list()] - Updating File List <config>...
+2025-03-30 02:19:12,605 [websockets.py:on_close()] - Websocket Closed: ID: 2783781392 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 8.06
+2025-03-30 03:20:01,447 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.120.50
+-------------------- Log Start | Thu Jan  1 00:00:14 1970 --------------------
+platform: Linux-4.9.191-armv7l-with-glibc2.28
+data_path: /home/gem/printer_data
+is_default_data_path: False
+config_file: /home/gem/printer_data/config/moonraker.conf
+startup_warnings: []
+verbose: False
+debug: False
+asyncio_debug: False
+is_backup_config: False
+is_python_package: False
+instance_uuid: 05c462f80d6f412785b0e1527692dcf9
+unix_socket_path: /home/gem/printer_data/comms/moonraker.sock
+software_version: v0.8.0-324-ga3e4dac-dirty
+git_branch: master
+git_remote: origin
+git_repo_url: https://github.com/Arksine/moonraker.git
+modified_files: ['moonraker/components/file_manager/file_manager.py']
+unofficial_components: []
+log_file: /home/gem/printer_data/logs/moonraker.log
+python_version: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+launch_args: /home/gem/moonraker-env/bin/python /home/gem/moonraker/moonraker/moonraker.py -d /home/gem/printer_data
+msgspec_enabled: False
+uvloop_enabled: False
+1970-01-01 00:00:14,266 [confighelper.py:read_file()] - Configuration File '/home/gem/printer_data/config/moonraker.conf' parsed, total size: 2348 B
+1970-01-01 00:00:14,274 [server.py:add_log_rollover_item()] - 
+#################### Moonraker Configuration ####################
+
+[server]
+host = 0.0.0.0
+port = 7125
+klippy_uds_address = /home/gem/printer_data/comms/klippy.sock
+
+[authorization]
+trusted_clients = 
+	10.60.0.0/16
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+cors_domains = 
+	*.lan
+	*.local
+	*://localhost
+	*://localhost:*
+	*://my.mainsail.xyz
+	*://app.fluidd.xyz
+
+[machine]
+provider = none
+validate_service = False
+validate_config = False
+
+[file_manager]
+file_system_observer = none
+
+[octoprint_compat]
+
+[history]
+
+[timelapse]
+output_path = /home/gem/timelapse/
+frame_path = /tmp/timelapse/
+ffmpeg_binary_path = /usr/bin/ffmpeg
+
+#################################################################
+All Configuration Files:
+/home/gem/printer_data/config/moonraker.conf
+#################################################################
+1970-01-01 00:00:15,020 [server.py:load_component()] - Component (secrets) loaded
+1970-01-01 00:00:15,065 [server.py:load_component()] - Component (template) loaded
+1970-01-01 00:00:15,168 [server.py:load_component()] - Component (klippy_connection) loaded
+1970-01-01 00:00:17,265 [server.py:load_component()] - Component (application) loaded
+1970-01-01 00:00:17,523 [server.py:load_component()] - Component (websockets) loaded
+1970-01-01 00:00:18,023 [server.py:load_component()] - Component (dbus_manager) loaded
+1970-01-01 00:00:18,134 [server.py:add_log_rollover_item()] - 
+Database Versions: pylmdb = 1.4.1, lmdb = (0, 9, 29)
+Unsafe Shutdown Count: 671
+1970-01-01 00:00:18,170 [server.py:load_component()] - Component (database) loaded
+1970-01-01 00:00:18,416 [file_manager.py:__init__()] - File System Observation is disabled
+1970-01-01 00:00:18,535 [server.py:load_component()] - Component (file_manager) loaded
+1970-01-01 00:00:18,759 [authorization.py:__init__()] - Authorization Configuration Loaded
+Trusted Clients:
+10.60.0.0/16
+10.0.0.0/8
+127.0.0.0/8
+169.254.0.0/16
+172.16.0.0/12
+192.168.0.0/16
+fe80::/10
+::1/128
+CORS Domains:
+.*\.lan
+.*\.local
+.*://localhost
+.*://localhost:.*
+.*://my\.mainsail\.xyz
+.*://app\.fluidd\.xyz
+1970-01-01 00:00:18,803 [server.py:load_component()] - Component (authorization) loaded
+1970-01-01 00:00:18,855 [server.py:load_component()] - Component (klippy_apis) loaded
+1970-01-01 00:00:19,371 [server.py:add_log_rollover_item()] - 
+System Info:
+
+***python***
+  version: (3, 7, 3, 'final', 0)
+  version_string: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+
+***cpu_info***
+  cpu_count: 1
+  bits: 32bit
+  processor: armv7l
+  cpu_desc: ARMv7 Processor rev 5 (v7l)
+  serial_number: 5c00108a2695c581d1a
+  hardware_desc: sun8iw21
+  model: 
+  total_memory: 503760
+  memory_units: kB
+
+***sd_info***
+  manufacturer_id: ec
+  manufacturer: Unknown
+  oem_id: 2900
+  product_name: AT2SA
+  product_revision: 4.1
+  serial_number: 2007e566
+  manufacturer_date: 10/2106
+  capacity: Unknown
+  total_bytes: 0
+
+***distribution***
+  name: Debian GNU/Linux 11 (bullseye)
+  id: debian
+  version: 11
+  version_parts: {'major': '11', 'minor': '', 'build_number': ''}
+  like: 
+  codename: bullseye
+  release_info: {}
+  kernel_version: 4.9.191
+
+***virtualization***
+  virt_type: none
+  virt_identifier: none
+
+***network***
+
+***canbus***
+
+***Allowed Services***
+  klipper_mcu
+  webcamd
+  MoonCord
+  KlipperScreen
+  moonraker-telegram-bot
+  moonraker-obico
+  timelapse
+  sonar
+  crowsnest
+  octoeverywhere
+  ratos-configurator
+1970-01-01 00:00:19,390 [server.py:load_component()] - Component (shell_command) loaded
+1970-01-01 00:00:19,397 [machine.py:__init__()] - Using System Provider: none
+1970-01-01 00:00:19,530 [server.py:add_log_rollover_item()] - Module libcamera unavailble, import failed
+1970-01-01 00:00:19,530 [server.py:load_component()] - Component (machine) loaded
+1970-01-01 00:00:19,555 [server.py:load_component()] - Component (data_store) loaded
+1970-01-01 00:00:19,571 [proc_stats.py:__init__()] - Unable to find 'vcgencmd', throttle checking disabled
+1970-01-01 00:00:19,581 [server.py:load_component()] - Component (proc_stats) loaded
+1970-01-01 00:00:19,598 [server.py:load_component()] - Component (job_state) loaded
+1970-01-01 00:00:19,663 [server.py:load_component()] - Component (job_queue) loaded
+1970-01-01 00:00:19,741 [server.py:load_component()] - Component (http_client) loaded
+1970-01-01 00:00:19,830 [server.py:load_component()] - Component (announcements) loaded
+1970-01-01 00:00:19,876 [server.py:load_component()] - Component (webcam) loaded
+1970-01-01 00:00:19,894 [server.py:load_component()] - Component (extensions) loaded
+1970-01-01 00:00:19,971 [server.py:load_component()] - Component (octoprint_compat) loaded
+1970-01-01 00:00:20,055 [server.py:load_component()] - Component (timelapse) loaded
+1970-01-01 00:00:20,104 [server.py:load_component()] - Component (history) loaded
+1970-01-01 00:00:20,115 [server.py:_initialize_component()] - Performing Component Post Init: [dbus_manager]
+1970-01-01 00:00:20,128 [dbus_manager.py:component_init()] - Unable to Connect to D-Bus
+1970-01-01 00:00:20,138 [server.py:_initialize_component()] - Performing Component Post Init: [file_manager]
+1970-01-01 00:00:20,139 [server.py:_initialize_component()] - Performing Component Post Init: [authorization]
+1970-01-01 00:00:20,139 [server.py:_initialize_component()] - Performing Component Post Init: [machine]
+1970-01-01 00:00:20,142 [machine.py:validation_init()] - Installation version in database up to date
+1970-01-01 00:00:20,226 [machine.py:_find_public_ip()] - Failed to detect local IP address
+1970-01-01 00:00:20,246 [server.py:_initialize_component()] - Performing Component Post Init: [proc_stats]
+1970-01-01 00:00:20,247 [server.py:_initialize_component()] - Performing Component Post Init: [announcements]
+1970-01-01 00:00:20,260 [server.py:_initialize_component()] - Performing Component Post Init: [webcam]
+1970-01-01 00:00:20,270 [server.py:_initialize_component()] - Performing Component Post Init: [klippy_connection]
+1970-01-01 00:00:20,272 [server.py:_initialize_component()] - Performing Component Post Init: [timelapse]
+1970-01-01 00:00:20,280 [timelapse.py:parseWebcamConfig()] - snapshoturl: http://localhost/timelapse/timelapse.jpg, Flip V/H: False/False, rotation: 0
+1970-01-01 00:00:20,287 [server.py:_initialize_component()] - Performing Component Post Init: [history]
+1970-01-01 00:00:20,354 [confighelper.py:create_backup()] - Backing up last working configuration to '/home/gem/printer_data/config/.moonraker.conf.bkp'
+1970-01-01 00:00:20,391 [extensions.py:start_unix_server()] - Creating Unix Domain Socket at '/home/gem/printer_data/comms/moonraker.sock'
+1970-01-01 00:00:20,395 [server.py:start_server()] - Starting Moonraker on (0.0.0.0, 7125), Hostname: Octopus
+1970-01-01 00:00:20,404 [application.py:listen()] - SSL Certificate/Key not configured, aborting HTTPS Server startup
+1970-01-01 00:00:20,554 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+1970-01-01 00:00:20,628 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 78.21ms
+1970-01-01 00:00:20,689 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+1970-01-01 00:00:21,685 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 4.73ms
+1970-01-01 00:00:22,503 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [Errno -3] Temporary failure in name resolution
+1970-01-01 00:00:22,796 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 34.48ms
+1970-01-01 00:00:23,858 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 14.99ms
+1970-01-01 00:00:24,550 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [Errno -3] Temporary failure in name resolution
+1970-01-01 00:00:24,928 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 19.63ms
+1970-01-01 00:00:26,011 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 21.33ms
+1970-01-01 00:00:27,175 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 4.63ms
+1970-01-01 00:00:29,009 [server.py:add_log_rollover_item()] - Klipper Version: bfb71bc-dirty
+1970-01-01 00:00:29,494 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 349.43ms
+1970-01-01 00:00:29,610 [application.py:log_request()] - 101 GET /websocket?token=ZH2I253GYV2BQU6EOGYG6JFGHX75OA52 (127.0.0.1) [_TRUSTED_USER_] 37.34ms
+1970-01-01 00:00:29,618 [websockets.py:open()] - Websocket Opened: ID: 2785198000, Proxied: False, User Agent: , Host Name: 0.0.0.0
+1970-01-01 00:00:30,021 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.connection.identify, Code: -32602, Message: Failed to decode JWT: not enough values to unpack (expected 2, got 1)
+1970-01-01 00:00:31,584 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+1970-01-01 00:00:31,598 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+1970-01-01 00:00:31,730 [machine.py:_find_public_ip()] - Failed to detect local IP address
+1970-01-01 00:00:31,823 [job_state.py:_handle_started()] - Job state initialized: standby
+1970-01-01 00:00:32,180 [klippy_connection.py:_check_ready()] - Klippy ready
+1970-01-01 00:00:32,583 [data_store.py:_init_sensors()] - Configuring available sensors: ['temperature_sensor MCU', 'temperature_sensor HOST', 'heater_bed', 'extruder']
+1970-01-01 00:00:34,461 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.connection.identify, Code: -32602, Message: Failed to decode JWT: not enough values to unpack (expected 2, got 1)
+1970-01-01 00:00:34,471 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.connection.identify, Code: -32602, Message: Failed to decode JWT: not enough values to unpack (expected 2, got 1)
+1970-01-01 00:00:34,480 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.connection.identify, Code: -32602, Message: Failed to decode JWT: not enough values to unpack (expected 2, got 1)
+1970-01-01 00:00:41,156 [machine.py:_find_public_ip()] - Failed to detect local IP address
+1970-01-01 00:00:51,155 [machine.py:_find_public_ip()] - Failed to detect local IP address
+1970-01-01 00:02:51,439 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.120.53
+1970-01-01 00:02:51,443 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.120.53
+2025-03-30 13:36:50,906 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2025-03-30 13:39:20,530 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.120.50
+2025-03-30 13:39:20,674 [application.py:log_request()] - 101 GET /websocket?token=B4LG3FUXCNXM4EVU332Z2GEU2XM6QJVN (192.168.120.50) [_TRUSTED_USER_] 11.75ms
+2025-03-30 13:39:20,675 [websockets.py:open()] - Websocket Opened: ID: 2785401904, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0, Host Name: 192.168.120.53
+2025-03-30 13:39:20,685 [websockets.py:_handle_identify()] - Websocket 2785401904 Client Identified - Name: fluidd, Version: 1.30.3-7ec46260, Type: web
+2025-03-30 13:39:20,689 [file_manager.py:get_file_list()] - Updating File List <config>...
+2025-03-30 13:49:25,096 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2025-03-30 13:49:25,099 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://127.0.0.1
+2025-03-30 13:49:45,168 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2025-03-30 13:49:50,898 [websockets.py:write_to_socket()] - Websocket closed while writing: 2785401904
+2025-03-30 13:49:55,226 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2025-03-30 13:49:55,682 [websockets.py:on_close()] - Websocket Closed: ID: 2785401904 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.85
+2025-03-30 13:50:05,234 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2025-03-30 13:50:15,259 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2025-03-30 13:50:25,290 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2025-03-30 13:51:05,434 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2025-03-30 13:51:25,499 [machine.py:_find_public_ip()] - Failed to detect local IP address
+2025-03-30 13:51:55,583 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.120.53
+2025-03-30 13:51:55,587 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.120.53
+2025-03-30 13:59:26,789 [application.py:log_request()] - 101 GET /websocket?token=QE4MW5O74G7QPRDLX5XNIB5PHMOCH57J (192.168.120.50) [_TRUSTED_USER_] 6.79ms
+2025-03-30 13:59:26,790 [websockets.py:open()] - Websocket Opened: ID: 2785174256, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0, Host Name: 192.168.120.53
+2025-03-30 13:59:26,799 [websockets.py:_handle_identify()] - Websocket 2785174256 Client Identified - Name: fluidd, Version: 1.30.3-7ec46260, Type: web
+2025-03-30 13:59:26,802 [file_manager.py:get_file_list()] - Updating File List <config>...
+-------------------- Log Start | Thu Jan  1 00:00:14 1970 --------------------
+platform: Linux-4.9.191-armv7l-with-glibc2.28
+data_path: /home/gem/printer_data
+is_default_data_path: False
+config_file: /home/gem/printer_data/config/moonraker.conf
+startup_warnings: []
+verbose: False
+debug: False
+asyncio_debug: False
+is_backup_config: False
+is_python_package: False
+instance_uuid: 05c462f80d6f412785b0e1527692dcf9
+unix_socket_path: /home/gem/printer_data/comms/moonraker.sock
+software_version: v0.8.0-324-ga3e4dac-dirty
+git_branch: master
+git_remote: origin
+git_repo_url: https://github.com/Arksine/moonraker.git
+modified_files: ['moonraker/components/file_manager/file_manager.py']
+unofficial_components: []
+log_file: /home/gem/printer_data/logs/moonraker.log
+python_version: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+launch_args: /home/gem/moonraker-env/bin/python /home/gem/moonraker/moonraker/moonraker.py -d /home/gem/printer_data
+msgspec_enabled: False
+uvloop_enabled: False
+1970-01-01 00:00:14,506 [confighelper.py:read_file()] - Configuration File '/home/gem/printer_data/config/moonraker.conf' parsed, total size: 2348 B
+1970-01-01 00:00:14,520 [server.py:add_log_rollover_item()] - 
+#################### Moonraker Configuration ####################
+
+[server]
+host = 0.0.0.0
+port = 7125
+klippy_uds_address = /home/gem/printer_data/comms/klippy.sock
+
+[authorization]
+trusted_clients = 
+	10.60.0.0/16
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+cors_domains = 
+	*.lan
+	*.local
+	*://localhost
+	*://localhost:*
+	*://my.mainsail.xyz
+	*://app.fluidd.xyz
+
+[machine]
+provider = none
+validate_service = False
+validate_config = False
+
+[file_manager]
+file_system_observer = none
+
+[octoprint_compat]
+
+[history]
+
+[timelapse]
+output_path = /home/gem/timelapse/
+frame_path = /tmp/timelapse/
+ffmpeg_binary_path = /usr/bin/ffmpeg
+
+#################################################################
+All Configuration Files:
+/home/gem/printer_data/config/moonraker.conf
+#################################################################
+1970-01-01 00:00:15,422 [server.py:load_component()] - Component (secrets) loaded
+1970-01-01 00:00:15,471 [server.py:load_component()] - Component (template) loaded
+1970-01-01 00:00:15,520 [server.py:load_component()] - Component (klippy_connection) loaded
+1970-01-01 00:00:17,662 [server.py:load_component()] - Component (application) loaded
+1970-01-01 00:00:17,870 [server.py:load_component()] - Component (websockets) loaded
+1970-01-01 00:00:18,450 [server.py:load_component()] - Component (dbus_manager) loaded
+1970-01-01 00:00:18,544 [server.py:add_log_rollover_item()] - 
+Database Versions: pylmdb = 1.4.1, lmdb = (0, 9, 29)
+Unsafe Shutdown Count: 672
+1970-01-01 00:00:18,580 [server.py:load_component()] - Component (database) loaded
+1970-01-01 00:00:18,834 [file_manager.py:__init__()] - File System Observation is disabled
+1970-01-01 00:00:18,936 [server.py:load_component()] - Component (file_manager) loaded
+1970-01-01 00:00:19,130 [authorization.py:__init__()] - Authorization Configuration Loaded
+Trusted Clients:
+10.60.0.0/16
+10.0.0.0/8
+127.0.0.0/8
+169.254.0.0/16
+172.16.0.0/12
+192.168.0.0/16
+fe80::/10
+::1/128
+CORS Domains:
+.*\.lan
+.*\.local
+.*://localhost
+.*://localhost:.*
+.*://my\.mainsail\.xyz
+.*://app\.fluidd\.xyz
+1970-01-01 00:00:19,184 [server.py:load_component()] - Component (authorization) loaded
+1970-01-01 00:00:19,248 [server.py:load_component()] - Component (klippy_apis) loaded
+1970-01-01 00:00:19,864 [server.py:add_log_rollover_item()] - 
+System Info:
+
+***python***
+  version: (3, 7, 3, 'final', 0)
+  version_string: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+
+***cpu_info***
+  cpu_count: 1
+  bits: 32bit
+  processor: armv7l
+  cpu_desc: ARMv7 Processor rev 5 (v7l)
+  serial_number: 5c00108a2695c581d1a
+  hardware_desc: sun8iw21
+  model: 
+  total_memory: 503760
+  memory_units: kB
+
+***sd_info***
+  manufacturer_id: ec
+  manufacturer: Unknown
+  oem_id: 2900
+  product_name: AT2SA
+  product_revision: 4.1
+  serial_number: 2007e566
+  manufacturer_date: 10/2106
+  capacity: Unknown
+  total_bytes: 0
+
+***distribution***
+  name: Debian GNU/Linux 11 (bullseye)
+  id: debian
+  version: 11
+  version_parts: {'major': '11', 'minor': '', 'build_number': ''}
+  like: 
+  codename: bullseye
+  release_info: {}
+  kernel_version: 4.9.191
+
+***virtualization***
+  virt_type: none
+  virt_identifier: none
+
+***network***
+
+***canbus***
+
+***Allowed Services***
+  klipper_mcu
+  webcamd
+  MoonCord
+  KlipperScreen
+  moonraker-telegram-bot
+  moonraker-obico
+  timelapse
+  sonar
+  crowsnest
+  octoeverywhere
+  ratos-configurator
+1970-01-01 00:00:19,890 [server.py:load_component()] - Component (shell_command) loaded
+1970-01-01 00:00:19,909 [machine.py:__init__()] - Using System Provider: none
+1970-01-01 00:00:20,065 [server.py:add_log_rollover_item()] - Module libcamera unavailble, import failed
+1970-01-01 00:00:20,085 [server.py:load_component()] - Component (machine) loaded
+1970-01-01 00:00:20,123 [server.py:load_component()] - Component (data_store) loaded
+1970-01-01 00:00:20,142 [proc_stats.py:__init__()] - Unable to find 'vcgencmd', throttle checking disabled
+1970-01-01 00:00:20,160 [server.py:load_component()] - Component (proc_stats) loaded
+1970-01-01 00:00:20,181 [server.py:load_component()] - Component (job_state) loaded
+1970-01-01 00:00:20,259 [server.py:load_component()] - Component (job_queue) loaded
+1970-01-01 00:00:20,321 [server.py:load_component()] - Component (http_client) loaded
+1970-01-01 00:00:20,385 [server.py:load_component()] - Component (announcements) loaded
+1970-01-01 00:00:20,429 [server.py:load_component()] - Component (webcam) loaded
+1970-01-01 00:00:20,456 [server.py:load_component()] - Component (extensions) loaded
+1970-01-01 00:00:20,519 [server.py:load_component()] - Component (history) loaded
+1970-01-01 00:00:20,604 [server.py:load_component()] - Component (timelapse) loaded
+1970-01-01 00:00:20,664 [server.py:load_component()] - Component (octoprint_compat) loaded
+1970-01-01 00:00:20,691 [server.py:_initialize_component()] - Performing Component Post Init: [dbus_manager]
+1970-01-01 00:00:20,698 [dbus_manager.py:component_init()] - Unable to Connect to D-Bus
+1970-01-01 00:00:20,705 [server.py:_initialize_component()] - Performing Component Post Init: [file_manager]
+1970-01-01 00:00:20,705 [server.py:_initialize_component()] - Performing Component Post Init: [authorization]
+1970-01-01 00:00:20,706 [server.py:_initialize_component()] - Performing Component Post Init: [machine]
+1970-01-01 00:00:20,709 [machine.py:validation_init()] - Installation version in database up to date
+1970-01-01 00:00:20,797 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.120.53
+1970-01-01 00:00:20,823 [server.py:_initialize_component()] - Performing Component Post Init: [proc_stats]
+1970-01-01 00:00:20,824 [server.py:_initialize_component()] - Performing Component Post Init: [announcements]
+1970-01-01 00:00:20,828 [server.py:_initialize_component()] - Performing Component Post Init: [webcam]
+1970-01-01 00:00:20,835 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.120.53
+1970-01-01 00:00:20,840 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.120.53
+1970-01-01 00:00:20,847 [server.py:_initialize_component()] - Performing Component Post Init: [klippy_connection]
+1970-01-01 00:00:20,849 [server.py:_initialize_component()] - Performing Component Post Init: [history]
+1970-01-01 00:00:20,881 [server.py:_initialize_component()] - Performing Component Post Init: [timelapse]
+1970-01-01 00:00:20,894 [timelapse.py:parseWebcamConfig()] - snapshoturl: http://localhost/timelapse/timelapse.jpg, Flip V/H: False/False, rotation: 0
+1970-01-01 00:00:20,940 [confighelper.py:create_backup()] - Backing up last working configuration to '/home/gem/printer_data/config/.moonraker.conf.bkp'
+1970-01-01 00:00:20,959 [extensions.py:start_unix_server()] - Creating Unix Domain Socket at '/home/gem/printer_data/comms/moonraker.sock'
+1970-01-01 00:00:20,972 [server.py:start_server()] - Starting Moonraker on (0.0.0.0, 7125), Hostname: Octopus
+1970-01-01 00:00:20,983 [application.py:listen()] - SSL Certificate/Key not configured, aborting HTTPS Server startup
+1970-01-01 00:00:21,276 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+1970-01-01 00:00:21,646 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+1970-01-01 00:00:21,708 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 72.97ms
+1970-01-01 00:00:22,782 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 27.12ms
+1970-01-01 00:00:23,672 [iostream.py:_do_ssl_handshake()] - SSL Error on 11 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:23,868 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 24.41ms
+1970-01-01 00:00:24,409 [iostream.py:_do_ssl_handshake()] - SSL Error on 11 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:24,960 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 30.69ms
+1970-01-01 00:00:25,092 [iostream.py:_do_ssl_handshake()] - SSL Error on 11 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:25,823 [iostream.py:_do_ssl_handshake()] - SSL Error on 11 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:26,050 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 20.34ms
+1970-01-01 00:00:26,453 [iostream.py:_do_ssl_handshake()] - SSL Error on 11 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:26,461 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:26,582 [iostream.py:_do_ssl_handshake()] - SSL Error on 11 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:27,972 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 588.71ms
+1970-01-01 00:00:29,065 [server.py:add_log_rollover_item()] - Klipper Version: bfb71bc-dirty
+1970-01-01 00:00:29,365 [iostream.py:_do_ssl_handshake()] - SSL Error on 11 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:30,010 [iostream.py:_do_ssl_handshake()] - SSL Error on 11 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:30,059 [application.py:log_request()] - 101 GET /websocket?token=WO5JJO3YADKNPMC3YJLGZRQWEWG4KVCF (127.0.0.1) [_TRUSTED_USER_] 32.65ms
+1970-01-01 00:00:30,060 [websockets.py:open()] - Websocket Opened: ID: 2785278352, Proxied: False, User Agent: , Host Name: 0.0.0.0
+1970-01-01 00:00:30,186 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.connection.identify, Code: -32602, Message: Failed to decode JWT: not enough values to unpack (expected 2, got 1)
+1970-01-01 00:00:30,726 [web.py:send_error()] - Uncaught exception in write_error
+Traceback (most recent call last):
+  File "/home/gem/moonraker/moonraker/components/application.py", line 700, in _process_http_request
+    args, req_type, transport, ip, self.current_user
+  File "/home/gem/moonraker/moonraker/components/klippy_connection.py", line 584, in request
+    return await self._request_standard(web_request)
+  File "/home/gem/moonraker/moonraker/components/klippy_connection.py", line 678, in _request_standard
+    return await base_request.wait(timeout)
+  File "/home/gem/moonraker/moonraker/components/klippy_connection.py", line 789, in wait
+    return await asyncio.wait_for(asyncio.shield(self._fut), to)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+moonraker.utils.ServerError: 
+Printer is not ready
+The klippy host software is attempting to connect.  Please
+retry in a few moments.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/web.py", line 1713, in _execute
+    result = await result
+  File "/home/gem/moonraker/moonraker/components/application.py", line 685, in post
+    await self._process_http_request(RequestType.POST)
+  File "/home/gem/moonraker/moonraker/components/application.py", line 704, in _process_http_request
+    e.status_code, reason=str(e)) from e
+tornado.web.HTTPError: HTTP 400: 
+Printer is not ready
+The klippy host software is attempting to connect.  Please
+retry in a few moments.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/web.py", line 1219, in send_error
+    self.write_error(status_code, **kwargs)
+  File "/home/gem/moonraker/moonraker/components/application.py", line 535, in write_error
+    self.finish(jsonw.dumps({'error': err}))
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/web.py", line 1159, in finish
+    future = self.flush(include_footers=True)
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/web.py", line 1097, in flush
+    start_line, self._headers, chunk
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/http1connection.py", line 457, in write_headers
+    raise ValueError("Newline in header: " + repr(line))
+ValueError: Newline in header: b'HTTP/1.1 400 \nPrinter is not ready\nThe klippy host software is attempting to connect.  Please\nretry in a few moments.\n'
+1970-01-01 00:00:30,766 [web.py:_execute()] - Exception in exception handler
+Traceback (most recent call last):
+  File "/home/gem/moonraker/moonraker/components/application.py", line 700, in _process_http_request
+    args, req_type, transport, ip, self.current_user
+  File "/home/gem/moonraker/moonraker/components/klippy_connection.py", line 584, in request
+    return await self._request_standard(web_request)
+  File "/home/gem/moonraker/moonraker/components/klippy_connection.py", line 678, in _request_standard
+    return await base_request.wait(timeout)
+  File "/home/gem/moonraker/moonraker/components/klippy_connection.py", line 789, in wait
+    return await asyncio.wait_for(asyncio.shield(self._fut), to)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+moonraker.utils.ServerError: 
+Printer is not ready
+The klippy host software is attempting to connect.  Please
+retry in a few moments.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/web.py", line 1713, in _execute
+    result = await result
+  File "/home/gem/moonraker/moonraker/components/application.py", line 685, in post
+    await self._process_http_request(RequestType.POST)
+  File "/home/gem/moonraker/moonraker/components/application.py", line 704, in _process_http_request
+    e.status_code, reason=str(e)) from e
+tornado.web.HTTPError: HTTP 400: 
+Printer is not ready
+The klippy host software is attempting to connect.  Please
+retry in a few moments.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/web.py", line 1718, in _execute
+    self._handle_request_exception(e)
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/web.py", line 1773, in _handle_request_exception
+    self.send_error(e.status_code, exc_info=sys.exc_info())
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/web.py", line 1223, in send_error
+    self.finish()
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/web.py", line 1160, in finish
+    self.request.connection.finish()
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/http1connection.py", line 516, in finish
+    % self._expected_content_remaining
+tornado.httputil.HTTPOutputError: Tried to write 1752 bytes less than Content-Length
+1970-01-01 00:00:31,012 [iostream.py:_do_ssl_handshake()] - SSL Error on 14 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:31,210 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+1970-01-01 00:00:31,220 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+1970-01-01 00:00:31,446 [job_state.py:_handle_started()] - Job state initialized: standby
+1970-01-01 00:00:31,783 [klippy_connection.py:_check_ready()] - Klippy ready
+1970-01-01 00:00:32,229 [data_store.py:_init_sensors()] - Configuring available sensors: ['temperature_sensor MCU', 'temperature_sensor HOST', 'heater_bed', 'extruder']
+1970-01-01 00:00:34,348 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.connection.identify, Code: -32602, Message: Failed to decode JWT: not enough values to unpack (expected 2, got 1)
+1970-01-01 00:00:34,351 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.connection.identify, Code: -32602, Message: Failed to decode JWT: not enough values to unpack (expected 2, got 1)
+1970-01-01 00:00:36,527 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': Timeout while connecting
+1970-01-01 00:00:38,926 [iostream.py:_do_ssl_handshake()] - SSL Error on 11 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:38,940 [ioloop.py:_run_callback()] - Exception in callback functools.partial(<function _HTTPConnection.__init__.<locals>.<lambda> at 0xa6039198>, <Task finished coro=<_HTTPConnection.run() done, defined at /home/gem/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py:290> exception=SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)')>)
+Traceback (most recent call last):
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/ioloop.py", line 740, in _run_callback
+    ret = callback()
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 287, in <lambda>
+    gen.convert_yielded(self.run()), lambda f: f.result()
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/simple_httpclient.py", line 346, in run
+    source_ip=source_ip,
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/tcpclient.py", line 289, in connect
+    False, ssl_options=ssl_options, server_hostname=host
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/iostream.py", line 1389, in _do_ssl_handshake
+    self.socket.do_handshake()
+  File "/usr/lib/python3.7/ssl.py", line 1117, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+2025-03-30 14:25:44,540 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+-------------------- Log Start | Thu Jan  1 00:00:14 1970 --------------------
+platform: Linux-4.9.191-armv7l-with-glibc2.28
+data_path: /home/gem/printer_data
+is_default_data_path: False
+config_file: /home/gem/printer_data/config/moonraker.conf
+startup_warnings: []
+verbose: False
+debug: False
+asyncio_debug: False
+is_backup_config: False
+is_python_package: False
+instance_uuid: 05c462f80d6f412785b0e1527692dcf9
+unix_socket_path: /home/gem/printer_data/comms/moonraker.sock
+software_version: v0.8.0-324-ga3e4dac-dirty
+git_branch: master
+git_remote: origin
+git_repo_url: https://github.com/Arksine/moonraker.git
+modified_files: ['moonraker/components/file_manager/file_manager.py']
+unofficial_components: []
+log_file: /home/gem/printer_data/logs/moonraker.log
+python_version: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+launch_args: /home/gem/moonraker-env/bin/python /home/gem/moonraker/moonraker/moonraker.py -d /home/gem/printer_data
+msgspec_enabled: False
+uvloop_enabled: False
+1970-01-01 00:00:14,286 [confighelper.py:read_file()] - Configuration File '/home/gem/printer_data/config/moonraker.conf' parsed, total size: 2348 B
+1970-01-01 00:00:14,297 [server.py:add_log_rollover_item()] - 
+#################### Moonraker Configuration ####################
+
+[server]
+host = 0.0.0.0
+port = 7125
+klippy_uds_address = /home/gem/printer_data/comms/klippy.sock
+
+[authorization]
+trusted_clients = 
+	10.60.0.0/16
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+cors_domains = 
+	*.lan
+	*.local
+	*://localhost
+	*://localhost:*
+	*://my.mainsail.xyz
+	*://app.fluidd.xyz
+
+[machine]
+provider = none
+validate_service = False
+validate_config = False
+
+[file_manager]
+file_system_observer = none
+
+[octoprint_compat]
+
+[history]
+
+[timelapse]
+output_path = /home/gem/timelapse/
+frame_path = /tmp/timelapse/
+ffmpeg_binary_path = /usr/bin/ffmpeg
+
+#################################################################
+All Configuration Files:
+/home/gem/printer_data/config/moonraker.conf
+#################################################################
+1970-01-01 00:00:15,210 [server.py:load_component()] - Component (secrets) loaded
+1970-01-01 00:00:15,252 [server.py:load_component()] - Component (template) loaded
+1970-01-01 00:00:15,404 [server.py:load_component()] - Component (klippy_connection) loaded
+1970-01-01 00:00:17,547 [server.py:load_component()] - Component (application) loaded
+1970-01-01 00:00:17,813 [server.py:load_component()] - Component (websockets) loaded
+1970-01-01 00:00:18,378 [server.py:load_component()] - Component (dbus_manager) loaded
+1970-01-01 00:00:18,471 [server.py:add_log_rollover_item()] - 
+Database Versions: pylmdb = 1.4.1, lmdb = (0, 9, 29)
+Unsafe Shutdown Count: 673
+1970-01-01 00:00:18,499 [server.py:load_component()] - Component (database) loaded
+1970-01-01 00:00:18,748 [file_manager.py:__init__()] - File System Observation is disabled
+1970-01-01 00:00:18,852 [server.py:load_component()] - Component (file_manager) loaded
+1970-01-01 00:00:19,066 [authorization.py:__init__()] - Authorization Configuration Loaded
+Trusted Clients:
+10.60.0.0/16
+10.0.0.0/8
+127.0.0.0/8
+169.254.0.0/16
+172.16.0.0/12
+192.168.0.0/16
+fe80::/10
+::1/128
+CORS Domains:
+.*\.lan
+.*\.local
+.*://localhost
+.*://localhost:.*
+.*://my\.mainsail\.xyz
+.*://app\.fluidd\.xyz
+1970-01-01 00:00:19,126 [server.py:load_component()] - Component (authorization) loaded
+1970-01-01 00:00:19,193 [server.py:load_component()] - Component (klippy_apis) loaded
+1970-01-01 00:00:19,974 [server.py:add_log_rollover_item()] - 
+System Info:
+
+***python***
+  version: (3, 7, 3, 'final', 0)
+  version_string: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+
+***cpu_info***
+  cpu_count: 1
+  bits: 32bit
+  processor: armv7l
+  cpu_desc: ARMv7 Processor rev 5 (v7l)
+  serial_number: 5c00108a2695c581d1a
+  hardware_desc: sun8iw21
+  model: 
+  total_memory: 503760
+  memory_units: kB
+
+***sd_info***
+  manufacturer_id: ec
+  manufacturer: Unknown
+  oem_id: 2900
+  product_name: AT2SA
+  product_revision: 4.1
+  serial_number: 2007e566
+  manufacturer_date: 10/2106
+  capacity: Unknown
+  total_bytes: 0
+
+***distribution***
+  name: Debian GNU/Linux 11 (bullseye)
+  id: debian
+  version: 11
+  version_parts: {'major': '11', 'minor': '', 'build_number': ''}
+  like: 
+  codename: bullseye
+  release_info: {}
+  kernel_version: 4.9.191
+
+***virtualization***
+  virt_type: none
+  virt_identifier: none
+
+***network***
+
+***canbus***
+
+***Allowed Services***
+  klipper_mcu
+  webcamd
+  MoonCord
+  KlipperScreen
+  moonraker-telegram-bot
+  moonraker-obico
+  timelapse
+  sonar
+  crowsnest
+  octoeverywhere
+  ratos-configurator
+1970-01-01 00:00:20,000 [server.py:load_component()] - Component (shell_command) loaded
+1970-01-01 00:00:20,009 [machine.py:__init__()] - Using System Provider: none
+1970-01-01 00:00:20,119 [server.py:add_log_rollover_item()] - Module libcamera unavailble, import failed
+1970-01-01 00:00:20,128 [server.py:load_component()] - Component (machine) loaded
+1970-01-01 00:00:20,155 [server.py:load_component()] - Component (data_store) loaded
+1970-01-01 00:00:20,168 [proc_stats.py:__init__()] - Unable to find 'vcgencmd', throttle checking disabled
+1970-01-01 00:00:20,171 [server.py:load_component()] - Component (proc_stats) loaded
+1970-01-01 00:00:20,191 [server.py:load_component()] - Component (job_state) loaded
+1970-01-01 00:00:20,272 [server.py:load_component()] - Component (job_queue) loaded
+1970-01-01 00:00:20,312 [server.py:load_component()] - Component (http_client) loaded
+1970-01-01 00:00:20,373 [server.py:load_component()] - Component (announcements) loaded
+1970-01-01 00:00:20,412 [server.py:load_component()] - Component (webcam) loaded
+1970-01-01 00:00:20,459 [server.py:load_component()] - Component (extensions) loaded
+1970-01-01 00:00:20,525 [server.py:load_component()] - Component (timelapse) loaded
+1970-01-01 00:00:20,557 [server.py:load_component()] - Component (history) loaded
+1970-01-01 00:00:20,659 [server.py:load_component()] - Component (octoprint_compat) loaded
+1970-01-01 00:00:20,667 [server.py:_initialize_component()] - Performing Component Post Init: [dbus_manager]
+1970-01-01 00:00:20,672 [dbus_manager.py:component_init()] - Unable to Connect to D-Bus
+1970-01-01 00:00:20,673 [server.py:_initialize_component()] - Performing Component Post Init: [file_manager]
+1970-01-01 00:00:20,673 [server.py:_initialize_component()] - Performing Component Post Init: [authorization]
+1970-01-01 00:00:20,673 [server.py:_initialize_component()] - Performing Component Post Init: [machine]
+1970-01-01 00:00:20,681 [machine.py:validation_init()] - Installation version in database up to date
+1970-01-01 00:00:20,766 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.120.53
+1970-01-01 00:00:20,788 [server.py:_initialize_component()] - Performing Component Post Init: [proc_stats]
+1970-01-01 00:00:20,795 [server.py:_initialize_component()] - Performing Component Post Init: [announcements]
+1970-01-01 00:00:20,801 [server.py:_initialize_component()] - Performing Component Post Init: [webcam]
+1970-01-01 00:00:20,813 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.120.53
+1970-01-01 00:00:20,821 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.120.53
+1970-01-01 00:00:20,832 [server.py:_initialize_component()] - Performing Component Post Init: [klippy_connection]
+1970-01-01 00:00:20,839 [server.py:_initialize_component()] - Performing Component Post Init: [timelapse]
+1970-01-01 00:00:20,849 [timelapse.py:parseWebcamConfig()] - snapshoturl: http://localhost/timelapse/timelapse.jpg, Flip V/H: False/False, rotation: 0
+1970-01-01 00:00:20,853 [server.py:_initialize_component()] - Performing Component Post Init: [history]
+1970-01-01 00:00:20,940 [confighelper.py:create_backup()] - Backing up last working configuration to '/home/gem/printer_data/config/.moonraker.conf.bkp'
+1970-01-01 00:00:20,960 [extensions.py:start_unix_server()] - Creating Unix Domain Socket at '/home/gem/printer_data/comms/moonraker.sock'
+1970-01-01 00:00:20,963 [server.py:start_server()] - Starting Moonraker on (0.0.0.0, 7125), Hostname: Octopus
+1970-01-01 00:00:20,984 [application.py:listen()] - SSL Certificate/Key not configured, aborting HTTPS Server startup
+1970-01-01 00:00:21,244 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+1970-01-01 00:00:21,272 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+1970-01-01 00:00:21,333 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 66.62ms
+1970-01-01 00:00:21,373 [iostream.py:_do_ssl_handshake()] - SSL Error on 12 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:22,062 [iostream.py:_do_ssl_handshake()] - SSL Error on 12 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:22,474 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 28.23ms
+1970-01-01 00:00:22,678 [iostream.py:_do_ssl_handshake()] - SSL Error on 12 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:23,308 [iostream.py:_do_ssl_handshake()] - SSL Error on 12 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:23,542 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 37.43ms
+1970-01-01 00:00:23,923 [iostream.py:_do_ssl_handshake()] - SSL Error on 12 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:23,935 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:24,284 [iostream.py:_do_ssl_handshake()] - SSL Error on 12 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:24,585 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 4.60ms
+1970-01-01 00:00:24,930 [iostream.py:_do_ssl_handshake()] - SSL Error on 12 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:25,567 [iostream.py:_do_ssl_handshake()] - SSL Error on 12 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:25,674 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 30.67ms
+1970-01-01 00:00:27,178 [iostream.py:_do_ssl_handshake()] - SSL Error on 12 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+2025-03-30 18:20:41,174 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 1743358813852.22ms
+2025-03-30 18:20:41,673 [server.py:add_log_rollover_item()] - Klipper Version: bfb71bc-dirty
+2025-03-30 18:20:42,503 [application.py:log_request()] - 101 GET /websocket?token=M4Z4HOHY53TXXHZJRGFCAGYWVYPCPURZ (127.0.0.1) [_TRUSTED_USER_] 16.48ms
+2025-03-30 18:20:42,507 [websockets.py:open()] - Websocket Opened: ID: 2802272112, Proxied: False, User Agent: , Host Name: 0.0.0.0
+2025-03-30 18:20:42,688 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.connection.identify, Code: -32602, Message: Failed to decode JWT: not enough values to unpack (expected 2, got 1)
+2025-03-30 18:20:43,645 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2025-03-30 18:20:43,662 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2025-03-30 18:20:43,910 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-03-30 18:20:44,233 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-03-30 18:20:44,657 [data_store.py:_init_sensors()] - Configuring available sensors: ['temperature_sensor MCU', 'temperature_sensor HOST', 'heater_bed', 'extruder']
+2025-03-30 18:20:46,796 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.connection.identify, Code: -32602, Message: Failed to decode JWT: not enough values to unpack (expected 2, got 1)
+2025-03-30 18:20:46,799 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.connection.identify, Code: -32602, Message: Failed to decode JWT: not enough values to unpack (expected 2, got 1)
+-------------------- Log Start | Sun Mar 30 18:58:25 2025 --------------------
+platform: Linux-4.9.191-armv7l-with-glibc2.28
+data_path: /home/gem/printer_data
+is_default_data_path: False
+config_file: /home/gem/printer_data/config/moonraker.conf
+startup_warnings: []
+verbose: False
+debug: False
+asyncio_debug: False
+is_backup_config: False
+is_python_package: False
+instance_uuid: 05c462f80d6f412785b0e1527692dcf9
+unix_socket_path: /home/gem/printer_data/comms/moonraker.sock
+software_version: v0.8.0-324-ga3e4dac-dirty
+git_branch: master
+git_remote: origin
+git_repo_url: https://github.com/Arksine/moonraker.git
+modified_files: ['moonraker/components/file_manager/file_manager.py']
+unofficial_components: []
+log_file: /home/gem/printer_data/logs/moonraker.log
+python_version: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+launch_args: /home/gem/moonraker-env/bin/python /home/gem/moonraker/moonraker/moonraker.py -d /home/gem/printer_data
+msgspec_enabled: False
+uvloop_enabled: False
+2025-03-30 18:58:25,399 [confighelper.py:read_file()] - Configuration File '/home/gem/printer_data/config/moonraker.conf' parsed, total size: 2348 B
+2025-03-30 18:58:25,400 [server.py:add_log_rollover_item()] - 
+#################### Moonraker Configuration ####################
+
+[server]
+host = 0.0.0.0
+port = 7125
+klippy_uds_address = /home/gem/printer_data/comms/klippy.sock
+
+[authorization]
+trusted_clients = 
+	10.60.0.0/16
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+cors_domains = 
+	*.lan
+	*.local
+	*://localhost
+	*://localhost:*
+	*://my.mainsail.xyz
+	*://app.fluidd.xyz
+
+[machine]
+provider = none
+validate_service = False
+validate_config = False
+
+[file_manager]
+file_system_observer = none
+
+[octoprint_compat]
+
+[history]
+
+[timelapse]
+output_path = /home/gem/timelapse/
+frame_path = /tmp/timelapse/
+ffmpeg_binary_path = /usr/bin/ffmpeg
+
+#################################################################
+All Configuration Files:
+/home/gem/printer_data/config/moonraker.conf
+#################################################################
+2025-03-30 18:58:26,359 [server.py:load_component()] - Component (secrets) loaded
+2025-03-30 18:58:26,405 [server.py:load_component()] - Component (template) loaded
+2025-03-30 18:58:26,541 [server.py:load_component()] - Component (klippy_connection) loaded
+2025-03-30 18:58:28,652 [server.py:load_component()] - Component (application) loaded
+2025-03-30 18:58:28,905 [server.py:load_component()] - Component (websockets) loaded
+2025-03-30 18:58:29,620 [server.py:load_component()] - Component (dbus_manager) loaded
+2025-03-30 18:58:29,770 [server.py:add_log_rollover_item()] - 
+Database Versions: pylmdb = 1.4.1, lmdb = (0, 9, 29)
+Unsafe Shutdown Count: 674
+2025-03-30 18:58:29,804 [server.py:load_component()] - Component (database) loaded
+2025-03-30 18:58:30,086 [file_manager.py:__init__()] - File System Observation is disabled
+2025-03-30 18:58:30,201 [server.py:load_component()] - Component (file_manager) loaded
+2025-03-30 18:58:30,402 [authorization.py:__init__()] - Authorization Configuration Loaded
+Trusted Clients:
+10.60.0.0/16
+10.0.0.0/8
+127.0.0.0/8
+169.254.0.0/16
+172.16.0.0/12
+192.168.0.0/16
+fe80::/10
+::1/128
+CORS Domains:
+.*\.lan
+.*\.local
+.*://localhost
+.*://localhost:.*
+.*://my\.mainsail\.xyz
+.*://app\.fluidd\.xyz
+2025-03-30 18:58:30,456 [server.py:load_component()] - Component (authorization) loaded
+2025-03-30 18:58:30,512 [server.py:load_component()] - Component (klippy_apis) loaded
+2025-03-30 18:58:31,022 [server.py:add_log_rollover_item()] - 
+System Info:
+
+***python***
+  version: (3, 7, 3, 'final', 0)
+  version_string: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+
+***cpu_info***
+  cpu_count: 1
+  bits: 32bit
+  processor: armv7l
+  cpu_desc: ARMv7 Processor rev 5 (v7l)
+  serial_number: 5c00108a2695c581d1a
+  hardware_desc: sun8iw21
+  model: 
+  total_memory: 503760
+  memory_units: kB
+
+***sd_info***
+  manufacturer_id: ec
+  manufacturer: Unknown
+  oem_id: 2900
+  product_name: AT2SA
+  product_revision: 4.1
+  serial_number: 2007e566
+  manufacturer_date: 10/2106
+  capacity: Unknown
+  total_bytes: 0
+
+***distribution***
+  name: Debian GNU/Linux 11 (bullseye)
+  id: debian
+  version: 11
+  version_parts: {'major': '11', 'minor': '', 'build_number': ''}
+  like: 
+  codename: bullseye
+  release_info: {}
+  kernel_version: 4.9.191
+
+***virtualization***
+  virt_type: none
+  virt_identifier: none
+
+***network***
+
+***canbus***
+
+***Allowed Services***
+  klipper_mcu
+  webcamd
+  MoonCord
+  KlipperScreen
+  moonraker-telegram-bot
+  moonraker-obico
+  timelapse
+  sonar
+  crowsnest
+  octoeverywhere
+  ratos-configurator
+2025-03-30 18:58:31,042 [server.py:load_component()] - Component (shell_command) loaded
+2025-03-30 18:58:31,042 [machine.py:__init__()] - Using System Provider: none
+2025-03-30 18:58:31,165 [server.py:add_log_rollover_item()] - Module libcamera unavailble, import failed
+2025-03-30 18:58:31,167 [server.py:load_component()] - Component (machine) loaded
+2025-03-30 18:58:31,205 [server.py:load_component()] - Component (data_store) loaded
+2025-03-30 18:58:31,227 [proc_stats.py:__init__()] - Unable to find 'vcgencmd', throttle checking disabled
+2025-03-30 18:58:31,232 [server.py:load_component()] - Component (proc_stats) loaded
+2025-03-30 18:58:31,251 [server.py:load_component()] - Component (job_state) loaded
+2025-03-30 18:58:31,311 [server.py:load_component()] - Component (job_queue) loaded
+2025-03-30 18:58:31,362 [server.py:load_component()] - Component (http_client) loaded
+2025-03-30 18:58:31,422 [server.py:load_component()] - Component (announcements) loaded
+2025-03-30 18:58:31,450 [server.py:load_component()] - Component (webcam) loaded
+2025-03-30 18:58:31,490 [server.py:load_component()] - Component (extensions) loaded
+2025-03-30 18:58:31,524 [server.py:load_component()] - Component (history) loaded
+2025-03-30 18:58:31,611 [server.py:load_component()] - Component (octoprint_compat) loaded
+2025-03-30 18:58:31,703 [server.py:load_component()] - Component (timelapse) loaded
+2025-03-30 18:58:31,710 [server.py:_initialize_component()] - Performing Component Post Init: [dbus_manager]
+2025-03-30 18:58:31,718 [dbus_manager.py:component_init()] - Unable to Connect to D-Bus
+2025-03-30 18:58:31,725 [server.py:_initialize_component()] - Performing Component Post Init: [file_manager]
+2025-03-30 18:58:31,725 [server.py:_initialize_component()] - Performing Component Post Init: [authorization]
+2025-03-30 18:58:31,726 [server.py:_initialize_component()] - Performing Component Post Init: [machine]
+2025-03-30 18:58:31,739 [machine.py:validation_init()] - Installation version in database up to date
+2025-03-30 18:58:31,825 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.120.53
+2025-03-30 18:58:31,839 [server.py:_initialize_component()] - Performing Component Post Init: [proc_stats]
+2025-03-30 18:58:31,843 [server.py:_initialize_component()] - Performing Component Post Init: [announcements]
+2025-03-30 18:58:31,850 [server.py:_initialize_component()] - Performing Component Post Init: [webcam]
+2025-03-30 18:58:31,862 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.120.53
+2025-03-30 18:58:31,869 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.120.53
+2025-03-30 18:58:31,872 [server.py:_initialize_component()] - Performing Component Post Init: [klippy_connection]
+2025-03-30 18:58:31,881 [server.py:_initialize_component()] - Performing Component Post Init: [history]
+2025-03-30 18:58:31,910 [server.py:_initialize_component()] - Performing Component Post Init: [timelapse]
+2025-03-30 18:58:31,926 [timelapse.py:parseWebcamConfig()] - snapshoturl: http://localhost/timelapse/timelapse.jpg, Flip V/H: False/False, rotation: 0
+2025-03-30 18:58:31,994 [confighelper.py:create_backup()] - Backing up last working configuration to '/home/gem/printer_data/config/.moonraker.conf.bkp'
+2025-03-30 18:58:32,052 [extensions.py:start_unix_server()] - Creating Unix Domain Socket at '/home/gem/printer_data/comms/moonraker.sock'
+2025-03-30 18:58:32,064 [server.py:start_server()] - Starting Moonraker on (0.0.0.0, 7125), Hostname: Octopus
+2025-03-30 18:58:32,081 [application.py:listen()] - SSL Certificate/Key not configured, aborting HTTPS Server startup
+2025-03-30 18:58:32,299 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+2025-03-30 18:58:32,363 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 100.32ms
+2025-03-30 18:58:32,428 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-03-30 18:58:33,449 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 22.05ms
+2025-03-30 18:58:34,507 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 23.05ms
+2025-03-30 18:58:35,572 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 4.61ms
+2025-03-30 18:58:36,671 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 28.36ms
+2025-03-30 18:58:36,920 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 4.58ms
+2025-03-30 18:58:38,720 [server.py:add_log_rollover_item()] - Klipper Version: bfb71bc-dirty
+2025-03-30 18:58:39,267 [application.py:log_request()] - 101 GET /websocket?token=4SKRFZ5LCKXTBUV6LK2UUQZ642PXZUOX (127.0.0.1) [_TRUSTED_USER_] 20.90ms
+2025-03-30 18:58:39,268 [websockets.py:open()] - Websocket Opened: ID: 2802065616, Proxied: False, User Agent: , Host Name: 0.0.0.0
+2025-03-30 18:58:39,417 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.connection.identify, Code: -32602, Message: Failed to decode JWT: not enough values to unpack (expected 2, got 1)
+2025-03-30 18:58:41,007 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2025-03-30 18:58:41,037 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2025-03-30 18:58:41,248 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-03-30 18:58:41,563 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-03-30 18:58:42,001 [data_store.py:_init_sensors()] - Configuring available sensors: ['temperature_sensor MCU', 'temperature_sensor HOST', 'heater_bed', 'extruder']
+2025-03-30 18:58:43,954 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.connection.identify, Code: -32602, Message: Failed to decode JWT: not enough values to unpack (expected 2, got 1)
+2025-03-30 18:58:43,957 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.connection.identify, Code: -32602, Message: Failed to decode JWT: not enough values to unpack (expected 2, got 1)
+2025-03-30 18:58:43,967 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.connection.identify, Code: -32602, Message: Failed to decode JWT: not enough values to unpack (expected 2, got 1)
+-------------------- Log Start | Sun Mar 30 19:24:14 2025 --------------------
+platform: Linux-4.9.191-armv7l-with-glibc2.28
+data_path: /home/gem/printer_data
+is_default_data_path: False
+config_file: /home/gem/printer_data/config/moonraker.conf
+startup_warnings: []
+verbose: False
+debug: False
+asyncio_debug: False
+is_backup_config: False
+is_python_package: False
+instance_uuid: 05c462f80d6f412785b0e1527692dcf9
+unix_socket_path: /home/gem/printer_data/comms/moonraker.sock
+software_version: v0.8.0-324-ga3e4dac-dirty
+git_branch: master
+git_remote: origin
+git_repo_url: https://github.com/Arksine/moonraker.git
+modified_files: ['moonraker/components/file_manager/file_manager.py']
+unofficial_components: []
+log_file: /home/gem/printer_data/logs/moonraker.log
+python_version: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+launch_args: /home/gem/moonraker-env/bin/python /home/gem/moonraker/moonraker/moonraker.py -d /home/gem/printer_data
+msgspec_enabled: False
+uvloop_enabled: False
+2025-03-30 19:24:14,189 [confighelper.py:read_file()] - Configuration File '/home/gem/printer_data/config/moonraker.conf' parsed, total size: 2348 B
+2025-03-30 19:24:14,201 [server.py:add_log_rollover_item()] - 
+#################### Moonraker Configuration ####################
+
+[server]
+host = 0.0.0.0
+port = 7125
+klippy_uds_address = /home/gem/printer_data/comms/klippy.sock
+
+[authorization]
+trusted_clients = 
+	10.60.0.0/16
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+cors_domains = 
+	*.lan
+	*.local
+	*://localhost
+	*://localhost:*
+	*://my.mainsail.xyz
+	*://app.fluidd.xyz
+
+[machine]
+provider = none
+validate_service = False
+validate_config = False
+
+[file_manager]
+file_system_observer = none
+
+[octoprint_compat]
+
+[history]
+
+[timelapse]
+output_path = /home/gem/timelapse/
+frame_path = /tmp/timelapse/
+ffmpeg_binary_path = /usr/bin/ffmpeg
+
+#################################################################
+All Configuration Files:
+/home/gem/printer_data/config/moonraker.conf
+#################################################################
+2025-03-30 19:24:15,166 [server.py:load_component()] - Component (secrets) loaded
+2025-03-30 19:24:15,210 [server.py:load_component()] - Component (template) loaded
+2025-03-30 19:24:15,252 [server.py:load_component()] - Component (klippy_connection) loaded
+2025-03-30 19:24:17,395 [server.py:load_component()] - Component (application) loaded
+2025-03-30 19:24:17,662 [server.py:load_component()] - Component (websockets) loaded
+2025-03-30 19:24:18,263 [server.py:load_component()] - Component (dbus_manager) loaded
+2025-03-30 19:24:18,414 [server.py:add_log_rollover_item()] - 
+Database Versions: pylmdb = 1.4.1, lmdb = (0, 9, 29)
+Unsafe Shutdown Count: 675
+2025-03-30 19:24:18,455 [server.py:load_component()] - Component (database) loaded
+2025-03-30 19:24:18,805 [file_manager.py:__init__()] - File System Observation is disabled
+2025-03-30 19:24:18,925 [server.py:load_component()] - Component (file_manager) loaded
+2025-03-30 19:24:19,138 [authorization.py:__init__()] - Authorization Configuration Loaded
+Trusted Clients:
+10.60.0.0/16
+10.0.0.0/8
+127.0.0.0/8
+169.254.0.0/16
+172.16.0.0/12
+192.168.0.0/16
+fe80::/10
+::1/128
+CORS Domains:
+.*\.lan
+.*\.local
+.*://localhost
+.*://localhost:.*
+.*://my\.mainsail\.xyz
+.*://app\.fluidd\.xyz
+2025-03-30 19:24:19,208 [server.py:load_component()] - Component (authorization) loaded
+2025-03-30 19:24:19,277 [server.py:load_component()] - Component (klippy_apis) loaded
+2025-03-30 19:24:19,774 [server.py:add_log_rollover_item()] - 
+System Info:
+
+***python***
+  version: (3, 7, 3, 'final', 0)
+  version_string: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+
+***cpu_info***
+  cpu_count: 1
+  bits: 32bit
+  processor: armv7l
+  cpu_desc: ARMv7 Processor rev 5 (v7l)
+  serial_number: 5c00108a2695c581d1a
+  hardware_desc: sun8iw21
+  model: 
+  total_memory: 503760
+  memory_units: kB
+
+***sd_info***
+  manufacturer_id: ec
+  manufacturer: Unknown
+  oem_id: 2900
+  product_name: AT2SA
+  product_revision: 4.1
+  serial_number: 2007e566
+  manufacturer_date: 10/2106
+  capacity: Unknown
+  total_bytes: 0
+
+***distribution***
+  name: Debian GNU/Linux 11 (bullseye)
+  id: debian
+  version: 11
+  version_parts: {'major': '11', 'minor': '', 'build_number': ''}
+  like: 
+  codename: bullseye
+  release_info: {}
+  kernel_version: 4.9.191
+
+***virtualization***
+  virt_type: none
+  virt_identifier: none
+
+***network***
+
+***canbus***
+
+***Allowed Services***
+  klipper_mcu
+  webcamd
+  MoonCord
+  KlipperScreen
+  moonraker-telegram-bot
+  moonraker-obico
+  timelapse
+  sonar
+  crowsnest
+  octoeverywhere
+  ratos-configurator
+2025-03-30 19:24:19,800 [server.py:load_component()] - Component (shell_command) loaded
+2025-03-30 19:24:19,800 [machine.py:__init__()] - Using System Provider: none
+2025-03-30 19:24:19,931 [server.py:add_log_rollover_item()] - Module libcamera unavailble, import failed
+2025-03-30 19:24:19,931 [server.py:load_component()] - Component (machine) loaded
+2025-03-30 19:24:19,948 [server.py:load_component()] - Component (data_store) loaded
+2025-03-30 19:24:19,975 [proc_stats.py:__init__()] - Unable to find 'vcgencmd', throttle checking disabled
+2025-03-30 19:24:19,983 [server.py:load_component()] - Component (proc_stats) loaded
+2025-03-30 19:24:20,001 [server.py:load_component()] - Component (job_state) loaded
+2025-03-30 19:24:20,063 [server.py:load_component()] - Component (job_queue) loaded
+2025-03-30 19:24:20,122 [server.py:load_component()] - Component (http_client) loaded
+2025-03-30 19:24:20,167 [server.py:load_component()] - Component (announcements) loaded
+2025-03-30 19:24:20,209 [server.py:load_component()] - Component (webcam) loaded
+2025-03-30 19:24:20,250 [server.py:load_component()] - Component (extensions) loaded
+2025-03-30 19:24:20,289 [server.py:load_component()] - Component (history) loaded
+2025-03-30 19:24:20,374 [server.py:load_component()] - Component (octoprint_compat) loaded
+2025-03-30 19:24:20,436 [server.py:load_component()] - Component (timelapse) loaded
+2025-03-30 19:24:20,463 [server.py:_initialize_component()] - Performing Component Post Init: [dbus_manager]
+2025-03-30 19:24:20,470 [dbus_manager.py:component_init()] - Unable to Connect to D-Bus
+2025-03-30 19:24:20,471 [server.py:_initialize_component()] - Performing Component Post Init: [file_manager]
+2025-03-30 19:24:20,472 [server.py:_initialize_component()] - Performing Component Post Init: [authorization]
+2025-03-30 19:24:20,472 [server.py:_initialize_component()] - Performing Component Post Init: [machine]
+2025-03-30 19:24:20,483 [machine.py:validation_init()] - Installation version in database up to date
+2025-03-30 19:24:20,587 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.120.53
+2025-03-30 19:24:20,595 [server.py:_initialize_component()] - Performing Component Post Init: [proc_stats]
+2025-03-30 19:24:20,601 [server.py:_initialize_component()] - Performing Component Post Init: [announcements]
+2025-03-30 19:24:20,605 [server.py:_initialize_component()] - Performing Component Post Init: [webcam]
+2025-03-30 19:24:20,610 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.120.53
+2025-03-30 19:24:20,614 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.120.53
+2025-03-30 19:24:20,623 [server.py:_initialize_component()] - Performing Component Post Init: [klippy_connection]
+2025-03-30 19:24:20,625 [server.py:_initialize_component()] - Performing Component Post Init: [history]
+2025-03-30 19:24:20,657 [server.py:_initialize_component()] - Performing Component Post Init: [timelapse]
+2025-03-30 19:24:20,661 [timelapse.py:parseWebcamConfig()] - snapshoturl: http://localhost/timelapse/timelapse.jpg, Flip V/H: False/False, rotation: 0
+2025-03-30 19:24:20,747 [extensions.py:start_unix_server()] - Creating Unix Domain Socket at '/home/gem/printer_data/comms/moonraker.sock'
+2025-03-30 19:24:20,811 [server.py:start_server()] - Starting Moonraker on (0.0.0.0, 7125), Hostname: Octopus
+2025-03-30 19:24:20,814 [application.py:listen()] - SSL Certificate/Key not configured, aborting HTTPS Server startup
+2025-03-30 19:24:21,087 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+2025-03-30 19:24:21,149 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 81.27ms
+2025-03-30 19:24:21,184 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2025-03-30 19:24:22,240 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 26.20ms
+2025-03-30 19:24:23,318 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 31.43ms
+2025-03-30 19:24:24,377 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 4.69ms
+2025-03-30 19:24:25,480 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 21.80ms
+2025-03-30 19:24:27,067 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 275.76ms
+2025-03-30 19:24:28,138 [server.py:add_log_rollover_item()] - Klipper Version: bfb71bc-dirty
+2025-03-30 19:24:28,524 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 214.65ms
+2025-03-30 19:24:28,726 [application.py:log_request()] - 101 GET /websocket?token=EXHQLR7QAZ7XVYKDA6LAGH6RI3IGMS5Y (127.0.0.1) [_TRUSTED_USER_] 42.58ms
+2025-03-30 19:24:28,730 [websockets.py:open()] - Websocket Opened: ID: 2828840944, Proxied: False, User Agent: , Host Name: 0.0.0.0
+2025-03-30 19:24:28,870 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.connection.identify, Code: -32602, Message: Failed to decode JWT: not enough values to unpack (expected 2, got 1)
+2025-03-30 19:24:30,488 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+2025-03-30 19:24:30,498 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+2025-03-30 19:24:30,730 [job_state.py:_handle_started()] - Job state initialized: standby
+2025-03-30 19:24:31,038 [klippy_connection.py:_check_ready()] - Klippy ready
+2025-03-30 19:24:31,474 [data_store.py:_init_sensors()] - Configuring available sensors: ['temperature_sensor MCU', 'temperature_sensor HOST', 'heater_bed', 'extruder']
+2025-03-30 19:24:33,133 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.connection.identify, Code: -32602, Message: Failed to decode JWT: not enough values to unpack (expected 2, got 1)
+2025-03-30 19:24:33,145 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.connection.identify, Code: -32602, Message: Failed to decode JWT: not enough values to unpack (expected 2, got 1)
+-------------------- Log Start | Thu Jan  1 00:00:14 1970 --------------------
+platform: Linux-4.9.191-armv7l-with-glibc2.28
+data_path: /home/gem/printer_data
+is_default_data_path: False
+config_file: /home/gem/printer_data/config/moonraker.conf
+startup_warnings: []
+verbose: False
+debug: False
+asyncio_debug: False
+is_backup_config: False
+is_python_package: False
+instance_uuid: 05c462f80d6f412785b0e1527692dcf9
+unix_socket_path: /home/gem/printer_data/comms/moonraker.sock
+software_version: v0.8.0-324-ga3e4dac-dirty
+git_branch: master
+git_remote: origin
+git_repo_url: https://github.com/Arksine/moonraker.git
+modified_files: ['moonraker/components/file_manager/file_manager.py']
+unofficial_components: []
+log_file: /home/gem/printer_data/logs/moonraker.log
+python_version: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+launch_args: /home/gem/moonraker-env/bin/python /home/gem/moonraker/moonraker/moonraker.py -d /home/gem/printer_data
+msgspec_enabled: False
+uvloop_enabled: False
+1970-01-01 00:00:14,284 [confighelper.py:read_file()] - Configuration File '/home/gem/printer_data/config/moonraker.conf' parsed, total size: 2348 B
+1970-01-01 00:00:14,292 [server.py:add_log_rollover_item()] - 
+#################### Moonraker Configuration ####################
+
+[server]
+host = 0.0.0.0
+port = 7125
+klippy_uds_address = /home/gem/printer_data/comms/klippy.sock
+
+[authorization]
+trusted_clients = 
+	10.60.0.0/16
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+cors_domains = 
+	*.lan
+	*.local
+	*://localhost
+	*://localhost:*
+	*://my.mainsail.xyz
+	*://app.fluidd.xyz
+
+[machine]
+provider = none
+validate_service = False
+validate_config = False
+
+[file_manager]
+file_system_observer = none
+
+[octoprint_compat]
+
+[history]
+
+[timelapse]
+output_path = /home/gem/timelapse/
+frame_path = /tmp/timelapse/
+ffmpeg_binary_path = /usr/bin/ffmpeg
+
+#################################################################
+All Configuration Files:
+/home/gem/printer_data/config/moonraker.conf
+#################################################################
+1970-01-01 00:00:14,987 [server.py:load_component()] - Component (secrets) loaded
+1970-01-01 00:00:15,054 [server.py:load_component()] - Component (template) loaded
+1970-01-01 00:00:15,212 [server.py:load_component()] - Component (klippy_connection) loaded
+1970-01-01 00:00:17,167 [server.py:load_component()] - Component (application) loaded
+1970-01-01 00:00:17,456 [server.py:load_component()] - Component (websockets) loaded
+1970-01-01 00:00:17,962 [server.py:load_component()] - Component (dbus_manager) loaded
+1970-01-01 00:00:18,072 [server.py:add_log_rollover_item()] - 
+Database Versions: pylmdb = 1.4.1, lmdb = (0, 9, 29)
+Unsafe Shutdown Count: 676
+1970-01-01 00:00:18,108 [server.py:load_component()] - Component (database) loaded
+1970-01-01 00:00:18,389 [file_manager.py:__init__()] - File System Observation is disabled
+1970-01-01 00:00:18,483 [server.py:load_component()] - Component (file_manager) loaded
+1970-01-01 00:00:18,721 [authorization.py:__init__()] - Authorization Configuration Loaded
+Trusted Clients:
+10.60.0.0/16
+10.0.0.0/8
+127.0.0.0/8
+169.254.0.0/16
+172.16.0.0/12
+192.168.0.0/16
+fe80::/10
+::1/128
+CORS Domains:
+.*\.lan
+.*\.local
+.*://localhost
+.*://localhost:.*
+.*://my\.mainsail\.xyz
+.*://app\.fluidd\.xyz
+1970-01-01 00:00:18,768 [server.py:load_component()] - Component (authorization) loaded
+1970-01-01 00:00:18,804 [server.py:load_component()] - Component (klippy_apis) loaded
+1970-01-01 00:00:19,365 [server.py:add_log_rollover_item()] - 
+System Info:
+
+***python***
+  version: (3, 7, 3, 'final', 0)
+  version_string: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+
+***cpu_info***
+  cpu_count: 1
+  bits: 32bit
+  processor: armv7l
+  cpu_desc: ARMv7 Processor rev 5 (v7l)
+  serial_number: 5c00108a2695c581d1a
+  hardware_desc: sun8iw21
+  model: 
+  total_memory: 503760
+  memory_units: kB
+
+***sd_info***
+  manufacturer_id: ec
+  manufacturer: Unknown
+  oem_id: 2900
+  product_name: AT2SA
+  product_revision: 4.1
+  serial_number: 2007e566
+  manufacturer_date: 10/2106
+  capacity: Unknown
+  total_bytes: 0
+
+***distribution***
+  name: Debian GNU/Linux 11 (bullseye)
+  id: debian
+  version: 11
+  version_parts: {'major': '11', 'minor': '', 'build_number': ''}
+  like: 
+  codename: bullseye
+  release_info: {}
+  kernel_version: 4.9.191
+
+***virtualization***
+  virt_type: none
+  virt_identifier: none
+
+***network***
+
+***canbus***
+
+***Allowed Services***
+  klipper_mcu
+  webcamd
+  MoonCord
+  KlipperScreen
+  moonraker-telegram-bot
+  moonraker-obico
+  timelapse
+  sonar
+  crowsnest
+  octoeverywhere
+  ratos-configurator
+1970-01-01 00:00:19,402 [server.py:load_component()] - Component (shell_command) loaded
+1970-01-01 00:00:19,408 [machine.py:__init__()] - Using System Provider: none
+1970-01-01 00:00:19,509 [server.py:add_log_rollover_item()] - Module libcamera unavailble, import failed
+1970-01-01 00:00:19,520 [server.py:load_component()] - Component (machine) loaded
+1970-01-01 00:00:19,555 [server.py:load_component()] - Component (data_store) loaded
+1970-01-01 00:00:19,570 [proc_stats.py:__init__()] - Unable to find 'vcgencmd', throttle checking disabled
+1970-01-01 00:00:19,589 [server.py:load_component()] - Component (proc_stats) loaded
+1970-01-01 00:00:19,598 [server.py:load_component()] - Component (job_state) loaded
+1970-01-01 00:00:19,649 [server.py:load_component()] - Component (job_queue) loaded
+1970-01-01 00:00:19,703 [server.py:load_component()] - Component (http_client) loaded
+1970-01-01 00:00:19,753 [server.py:load_component()] - Component (announcements) loaded
+1970-01-01 00:00:19,808 [server.py:load_component()] - Component (webcam) loaded
+1970-01-01 00:00:19,817 [server.py:load_component()] - Component (extensions) loaded
+1970-01-01 00:00:19,886 [server.py:load_component()] - Component (history) loaded
+1970-01-01 00:00:19,961 [server.py:load_component()] - Component (timelapse) loaded
+1970-01-01 00:00:20,079 [server.py:load_component()] - Component (octoprint_compat) loaded
+1970-01-01 00:00:20,087 [server.py:_initialize_component()] - Performing Component Post Init: [dbus_manager]
+1970-01-01 00:00:20,111 [dbus_manager.py:component_init()] - Unable to Connect to D-Bus
+1970-01-01 00:00:20,111 [server.py:_initialize_component()] - Performing Component Post Init: [file_manager]
+1970-01-01 00:00:20,111 [server.py:_initialize_component()] - Performing Component Post Init: [authorization]
+1970-01-01 00:00:20,112 [server.py:_initialize_component()] - Performing Component Post Init: [machine]
+1970-01-01 00:00:20,125 [machine.py:validation_init()] - Installation version in database up to date
+1970-01-01 00:00:20,237 [machine.py:_find_public_ip()] - Failed to detect local IP address
+1970-01-01 00:00:20,256 [server.py:_initialize_component()] - Performing Component Post Init: [proc_stats]
+1970-01-01 00:00:20,261 [server.py:_initialize_component()] - Performing Component Post Init: [announcements]
+1970-01-01 00:00:20,270 [server.py:_initialize_component()] - Performing Component Post Init: [webcam]
+1970-01-01 00:00:20,299 [server.py:_initialize_component()] - Performing Component Post Init: [klippy_connection]
+1970-01-01 00:00:20,305 [server.py:_initialize_component()] - Performing Component Post Init: [history]
+1970-01-01 00:00:20,325 [server.py:_initialize_component()] - Performing Component Post Init: [timelapse]
+1970-01-01 00:00:20,341 [timelapse.py:parseWebcamConfig()] - snapshoturl: http://localhost/timelapse/timelapse.jpg, Flip V/H: False/False, rotation: 0
+1970-01-01 00:00:20,444 [extensions.py:start_unix_server()] - Creating Unix Domain Socket at '/home/gem/printer_data/comms/moonraker.sock'
+1970-01-01 00:00:20,510 [server.py:start_server()] - Starting Moonraker on (0.0.0.0, 7125), Hostname: Octopus
+1970-01-01 00:00:20,513 [application.py:listen()] - SSL Certificate/Key not configured, aborting HTTPS Server startup
+1970-01-01 00:00:20,536 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.120.53
+1970-01-01 00:00:20,553 [webcam.py:_set_default_host_ip()] - Default public webcam address set: http://192.168.120.53
+1970-01-01 00:00:20,632 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 127.0.0.1
+1970-01-01 00:00:20,680 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 86.07ms
+1970-01-01 00:00:20,721 [iostream.py:_do_ssl_handshake()] - SSL Error on 13 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:20,786 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+1970-01-01 00:00:21,427 [iostream.py:_do_ssl_handshake()] - SSL Error on 13 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:21,775 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 4.69ms
+1970-01-01 00:00:22,040 [iostream.py:_do_ssl_handshake()] - SSL Error on 13 ('185.199.111.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:22,642 [iostream.py:_do_ssl_handshake()] - SSL Error on 13 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:22,861 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 28.05ms
+1970-01-01 00:00:23,267 [iostream.py:_do_ssl_handshake()] - SSL Error on 13 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:23,283 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'moonraker': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:23,438 [iostream.py:_do_ssl_handshake()] - SSL Error on 13 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:23,925 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 18.29ms
+1970-01-01 00:00:24,119 [iostream.py:_do_ssl_handshake()] - SSL Error on 13 ('185.199.108.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:24,736 [iostream.py:_do_ssl_handshake()] - SSL Error on 13 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:25,005 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 4.69ms
+1970-01-01 00:00:25,336 [iostream.py:_do_ssl_handshake()] - SSL Error on 13 ('185.199.110.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:25,968 [iostream.py:_do_ssl_handshake()] - SSL Error on 13 ('185.199.109.153', 443): [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:25,981 [announcements.py:_fetch_moonlight()] - Failed to update subscription 'klipper': [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1056)
+1970-01-01 00:00:26,056 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 8.80ms
+1970-01-01 00:00:27,255 [application.py:log_request()] - 404 GET /printer/info (127.0.0.1) [_TRUSTED_USER_] 4.65ms
+1970-01-01 00:00:29,029 [server.py:add_log_rollover_item()] - Klipper Version: bfb71bc-dirty
+1970-01-01 00:00:29,580 [application.py:log_request()] - 101 GET /websocket?token=3XDTXBQ3275FWT2M4MEQ4J6E4A6SW6KX (127.0.0.1) [_TRUSTED_USER_] 17.02ms
+1970-01-01 00:00:29,581 [websockets.py:open()] - Websocket Opened: ID: 2802299696, Proxied: False, User Agent: , Host Name: 0.0.0.0
+1970-01-01 00:00:29,718 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.connection.identify, Code: -32602, Message: Failed to decode JWT: not enough values to unpack (expected 2, got 1)
+1970-01-01 00:00:30,219 [web.py:send_error()] - Uncaught exception in write_error
+Traceback (most recent call last):
+  File "/home/gem/moonraker/moonraker/components/application.py", line 700, in _process_http_request
+    args, req_type, transport, ip, self.current_user
+  File "/home/gem/moonraker/moonraker/components/klippy_connection.py", line 584, in request
+    return await self._request_standard(web_request)
+  File "/home/gem/moonraker/moonraker/components/klippy_connection.py", line 678, in _request_standard
+    return await base_request.wait(timeout)
+  File "/home/gem/moonraker/moonraker/components/klippy_connection.py", line 789, in wait
+    return await asyncio.wait_for(asyncio.shield(self._fut), to)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+moonraker.utils.ServerError: 
+Printer is not ready
+The klippy host software is attempting to connect.  Please
+retry in a few moments.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/web.py", line 1713, in _execute
+    result = await result
+  File "/home/gem/moonraker/moonraker/components/application.py", line 685, in post
+    await self._process_http_request(RequestType.POST)
+  File "/home/gem/moonraker/moonraker/components/application.py", line 704, in _process_http_request
+    e.status_code, reason=str(e)) from e
+tornado.web.HTTPError: HTTP 400: 
+Printer is not ready
+The klippy host software is attempting to connect.  Please
+retry in a few moments.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/web.py", line 1219, in send_error
+    self.write_error(status_code, **kwargs)
+  File "/home/gem/moonraker/moonraker/components/application.py", line 535, in write_error
+    self.finish(jsonw.dumps({'error': err}))
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/web.py", line 1159, in finish
+    future = self.flush(include_footers=True)
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/web.py", line 1097, in flush
+    start_line, self._headers, chunk
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/http1connection.py", line 457, in write_headers
+    raise ValueError("Newline in header: " + repr(line))
+ValueError: Newline in header: b'HTTP/1.1 400 \nPrinter is not ready\nThe klippy host software is attempting to connect.  Please\nretry in a few moments.\n'
+1970-01-01 00:00:30,238 [web.py:_execute()] - Exception in exception handler
+Traceback (most recent call last):
+  File "/home/gem/moonraker/moonraker/components/application.py", line 700, in _process_http_request
+    args, req_type, transport, ip, self.current_user
+  File "/home/gem/moonraker/moonraker/components/klippy_connection.py", line 584, in request
+    return await self._request_standard(web_request)
+  File "/home/gem/moonraker/moonraker/components/klippy_connection.py", line 678, in _request_standard
+    return await base_request.wait(timeout)
+  File "/home/gem/moonraker/moonraker/components/klippy_connection.py", line 789, in wait
+    return await asyncio.wait_for(asyncio.shield(self._fut), to)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+moonraker.utils.ServerError: 
+Printer is not ready
+The klippy host software is attempting to connect.  Please
+retry in a few moments.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/web.py", line 1713, in _execute
+    result = await result
+  File "/home/gem/moonraker/moonraker/components/application.py", line 685, in post
+    await self._process_http_request(RequestType.POST)
+  File "/home/gem/moonraker/moonraker/components/application.py", line 704, in _process_http_request
+    e.status_code, reason=str(e)) from e
+tornado.web.HTTPError: HTTP 400: 
+Printer is not ready
+The klippy host software is attempting to connect.  Please
+retry in a few moments.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/web.py", line 1718, in _execute
+    self._handle_request_exception(e)
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/web.py", line 1773, in _handle_request_exception
+    self.send_error(e.status_code, exc_info=sys.exc_info())
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/web.py", line 1223, in send_error
+    self.finish()
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/web.py", line 1160, in finish
+    self.request.connection.finish()
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/http1connection.py", line 516, in finish
+    % self._expected_content_remaining
+tornado.httputil.HTTPOutputError: Tried to write 1752 bytes less than Content-Length
+1970-01-01 00:00:30,291 [web.py:send_error()] - Uncaught exception in write_error
+Traceback (most recent call last):
+  File "/home/gem/moonraker/moonraker/components/application.py", line 700, in _process_http_request
+    args, req_type, transport, ip, self.current_user
+  File "/home/gem/moonraker/moonraker/components/klippy_connection.py", line 584, in request
+    return await self._request_standard(web_request)
+  File "/home/gem/moonraker/moonraker/components/klippy_connection.py", line 678, in _request_standard
+    return await base_request.wait(timeout)
+  File "/home/gem/moonraker/moonraker/components/klippy_connection.py", line 789, in wait
+    return await asyncio.wait_for(asyncio.shield(self._fut), to)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+moonraker.utils.ServerError: 
+Printer is not ready
+The klippy host software is attempting to connect.  Please
+retry in a few moments.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/web.py", line 1713, in _execute
+    result = await result
+  File "/home/gem/moonraker/moonraker/components/application.py", line 685, in post
+    await self._process_http_request(RequestType.POST)
+  File "/home/gem/moonraker/moonraker/components/application.py", line 704, in _process_http_request
+    e.status_code, reason=str(e)) from e
+tornado.web.HTTPError: HTTP 400: 
+Printer is not ready
+The klippy host software is attempting to connect.  Please
+retry in a few moments.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/web.py", line 1219, in send_error
+    self.write_error(status_code, **kwargs)
+  File "/home/gem/moonraker/moonraker/components/application.py", line 535, in write_error
+    self.finish(jsonw.dumps({'error': err}))
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/web.py", line 1159, in finish
+    future = self.flush(include_footers=True)
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/web.py", line 1097, in flush
+    start_line, self._headers, chunk
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/http1connection.py", line 457, in write_headers
+    raise ValueError("Newline in header: " + repr(line))
+ValueError: Newline in header: b'HTTP/1.1 400 \nPrinter is not ready\nThe klippy host software is attempting to connect.  Please\nretry in a few moments.\n'
+1970-01-01 00:00:30,304 [web.py:_execute()] - Exception in exception handler
+Traceback (most recent call last):
+  File "/home/gem/moonraker/moonraker/components/application.py", line 700, in _process_http_request
+    args, req_type, transport, ip, self.current_user
+  File "/home/gem/moonraker/moonraker/components/klippy_connection.py", line 584, in request
+    return await self._request_standard(web_request)
+  File "/home/gem/moonraker/moonraker/components/klippy_connection.py", line 678, in _request_standard
+    return await base_request.wait(timeout)
+  File "/home/gem/moonraker/moonraker/components/klippy_connection.py", line 789, in wait
+    return await asyncio.wait_for(asyncio.shield(self._fut), to)
+  File "/usr/lib/python3.7/asyncio/tasks.py", line 416, in wait_for
+    return fut.result()
+moonraker.utils.ServerError: 
+Printer is not ready
+The klippy host software is attempting to connect.  Please
+retry in a few moments.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/web.py", line 1713, in _execute
+    result = await result
+  File "/home/gem/moonraker/moonraker/components/application.py", line 685, in post
+    await self._process_http_request(RequestType.POST)
+  File "/home/gem/moonraker/moonraker/components/application.py", line 704, in _process_http_request
+    e.status_code, reason=str(e)) from e
+tornado.web.HTTPError: HTTP 400: 
+Printer is not ready
+The klippy host software is attempting to connect.  Please
+retry in a few moments.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/web.py", line 1718, in _execute
+    self._handle_request_exception(e)
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/web.py", line 1773, in _handle_request_exception
+    self.send_error(e.status_code, exc_info=sys.exc_info())
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/web.py", line 1223, in send_error
+    self.finish()
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/web.py", line 1160, in finish
+    self.request.connection.finish()
+  File "/home/gem/moonraker-env/lib/python3.7/site-packages/tornado/http1connection.py", line 516, in finish
+    % self._expected_content_remaining
+tornado.httputil.HTTPOutputError: Tried to write 1752 bytes less than Content-Length
+1970-01-01 00:00:31,240 [machine.py:_find_public_ip()] - Detected Local IP: 192.168.120.53
+1970-01-01 00:00:31,485 [klippy_connection.py:_request_initial_subscriptions()] - Webhooks Subscribed
+1970-01-01 00:00:31,504 [klippy_connection.py:_request_initial_subscriptions()] - GCode Output Subscribed
+1970-01-01 00:00:31,742 [job_state.py:_handle_started()] - Job state initialized: standby
+1970-01-01 00:00:32,048 [klippy_connection.py:_check_ready()] - Klippy ready
+1970-01-01 00:00:32,483 [data_store.py:_init_sensors()] - Configuring available sensors: ['temperature_sensor MCU', 'temperature_sensor HOST', 'heater_bed', 'extruder']
+2025-03-30 19:39:30,474 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.connection.identify, Code: -32602, Message: Failed to decode JWT: not enough values to unpack (expected 2, got 1)
+2025-03-30 19:39:30,486 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.connection.identify, Code: -32602, Message: Failed to decode JWT: not enough values to unpack (expected 2, got 1)
+2025-03-30 19:39:30,489 [common.py:build_error()] - JSON-RPC Request Error - Requested Method: server.connection.identify, Code: -32602, Message: Failed to decode JWT: not enough values to unpack (expected 2, got 1)
+2025-03-30 19:43:34,331 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.120.50
+2025-03-30 19:43:34,475 [application.py:log_request()] - 101 GET /websocket?token=5C4TSRTAJGCZD5G3RDXCN2V2SSEIRJVC (192.168.120.50) [_TRUSTED_USER_] 11.65ms
+2025-03-30 19:43:34,476 [websockets.py:open()] - Websocket Opened: ID: 2802430832, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:136.0) Gecko/20100101 Firefox/136.0, Host Name: 192.168.120.53
+2025-03-30 19:43:34,487 [websockets.py:_handle_identify()] - Websocket 2802430832 Client Identified - Name: fluidd, Version: 1.30.3-7ec46260, Type: web
+2025-03-30 19:43:34,490 [file_manager.py:get_file_list()] - Updating File List <config>...
+2025-03-30 19:45:33,128 [websockets.py:on_close()] - Websocket Closed: ID: 2802430832 Close Code: 1001, Close Reason: None, Pong Time Elapsed: 8.64
+2025-03-30 20:44:16,568 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 127.0.0.1
+2025-03-30 20:44:16,569 [authorization.py:_prune_conn_handler()] - Trusted Connection Expired, IP: 192.168.120.50
